@@ -1,0 +1,21 @@
+[book]
+authors = ["David Ensminger", "and A. G. Madi"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Game Design with AGS"
+description = "Learn to create games with Adventure Game Studio"
+
+[output.html]
+site-url = "/AGSBook/"
+git-repository-url = "https://github.com/ensadi/AGSBook"
+
+[output.html.search]
+limit-results = 20
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 2
+boost-paragraph = 1
+expand = true
+heading-split-level = 2
+
