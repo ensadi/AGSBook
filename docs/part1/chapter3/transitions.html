@@ -1,0 +1,346 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Room Transitions - Game Design with AGS</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Learn to create games with Adventure Game Studio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">GAME DESIGN WITH AGS</a></li><li class="chapter-item expanded affix "><a href="../../title-page.html">Title Page</a></li><li class="chapter-item expanded affix "><a href="../../copyright.html">Copyright</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../preface/index.html">Preface</a></li><li class="chapter-item expanded affix "><a href="../../preface/dedication.html">Dedication</a></li><li class="chapter-item expanded affix "><a href="../../preface/forward.html">Forward</a></li><li class="chapter-item expanded affix "><a href="../../preface/acknowledgments.html">Acknowledgments</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../part1/part1.html"><strong aria-hidden="true">1.</strong> Part I - Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/index.html"><strong aria-hidden="true">1.1.</strong> Chapter 0 (yes, we're programmers)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/introduction.html"><strong aria-hidden="true">1.1.1.</strong> Getting to Know (and love) AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/history.html"><strong aria-hidden="true">1.1.2.</strong> History of the Adventure Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/about.html"><strong aria-hidden="true">1.1.3.</strong> About This Book</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/requirements.html"><strong aria-hidden="true">1.1.4.</strong> System Requirements</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/installing.html"><strong aria-hidden="true">1.1.5.</strong> Installing AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/first_game.html"><strong aria-hidden="true">1.1.6.</strong> Creating Your First Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/running_first_game.html"><strong aria-hidden="true">1.1.7.</strong> Running Your Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/song.html"><strong aria-hidden="true">1.1.8.</strong> Long Beer Song</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/summary.html"><strong aria-hidden="true">1.1.9.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter1/index.html"><strong aria-hidden="true">1.2.</strong> Chapter 1 - The AGS Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter1/editor.html"><strong aria-hidden="true">1.2.1.</strong> The Editor</a></li><li class="chapter-item expanded "><a href="../../part1/chapter1/summary.html"><strong aria-hidden="true">1.2.2.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter2/index.html"><strong aria-hidden="true">1.3.</strong> Chapter 2 - Sprites, Views, and Characters</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter2/sprites.html"><strong aria-hidden="true">1.3.1.</strong> Sprites</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/views.html"><strong aria-hidden="true">1.3.2.</strong> Views</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/characters.html"><strong aria-hidden="true">1.3.3.</strong> Characters</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/summary.html"><strong aria-hidden="true">1.3.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter3/index.html"><strong aria-hidden="true">1.4.</strong> Chapter 3 - Rooms and Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter3/simple_bg.html"><strong aria-hidden="true">1.4.1.</strong> Simple Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walkable_areas.html"><strong aria-hidden="true">1.4.2.</strong> Walkable Areas</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scrolling_bg.html"><strong aria-hidden="true">1.4.3.</strong> Scrolling Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/animating_bg.html"><strong aria-hidden="true">1.4.4.</strong> Animating Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walk_behinds.html"><strong aria-hidden="true">1.4.5.</strong> Walk-Behinds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/regions.html"><strong aria-hidden="true">1.4.6.</strong> Regions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/edges.html"><strong aria-hidden="true">1.4.7.</strong> Room Edges</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/lighting.html"><strong aria-hidden="true">1.4.8.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scaling.html"><strong aria-hidden="true">1.4.9.</strong> Scaling</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/transitions.html" class="active"><strong aria-hidden="true">1.4.10.</strong> Room Transitions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/homework.html"><strong aria-hidden="true">1.4.11.</strong> HOMEWORK</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/summary.html"><strong aria-hidden="true">1.4.12.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter4/index.html"><strong aria-hidden="true">1.5.</strong> Chapter 4 - Interacting with Your World</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter4/interaction.html"><strong aria-hidden="true">1.5.1.</strong> Interaction</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/hotspots.html"><strong aria-hidden="true">1.5.2.</strong> Hotspots</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/objects.html"><strong aria-hidden="true">1.5.3.</strong> Objects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/inventory.html"><strong aria-hidden="true">1.5.4.</strong> Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/using_inventory.html"><strong aria-hidden="true">1.5.5.</strong> Using Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/npc.html"><strong aria-hidden="true">1.5.6.</strong> Non-Player Characters (NPC)</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/summary.html"><strong aria-hidden="true">1.5.7.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter5/index.html"><strong aria-hidden="true">1.6.</strong> Chapter 5 - Sounds and Music (Make Some Noise!)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter5/sound_effects.html"><strong aria-hidden="true">1.6.1.</strong> Sound Effects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/bg_music.html"><strong aria-hidden="true">1.6.2.</strong> Background Music</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/speech.html"><strong aria-hidden="true">1.6.3.</strong> Speech</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/summary.html"><strong aria-hidden="true">1.6.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter6/index.html"><strong aria-hidden="true">1.7.</strong> Chapter 6 - Some Other Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter6/settings.html"><strong aria-hidden="true">1.7.1.</strong> General Settings</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/colors.html"><strong aria-hidden="true">1.7.2.</strong> Colors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/cursors.html"><strong aria-hidden="true">1.7.3.</strong> Mouse Cursors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/summary.html"><strong aria-hidden="true">1.7.4.</strong> Summary</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../part2/part2.html"><strong aria-hidden="true">2.</strong> Part II - Wishing You Were Here!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/index.html"><strong aria-hidden="true">2.1.</strong> Chapter 7 - Timers and Randomization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/timers.html"><strong aria-hidden="true">2.1.1.</strong> Timers</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/timers2.html"><strong aria-hidden="true">2.1.2.</strong> Timers, Take 2</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/randomize.html"><strong aria-hidden="true">2.1.3.</strong> Time to Randomize</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/summary.html"><strong aria-hidden="true">2.1.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/index.html"><strong aria-hidden="true">2.2.</strong> Chapter 8 - Spoken Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/dialog.html"><strong aria-hidden="true">2.2.1.</strong> Creating a Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/fonts.html"><strong aria-hidden="true">2.2.1.1.</strong> Fonts</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/ags_in_dialog.html"><strong aria-hidden="true">2.2.2.</strong> AGS Scripts in Dialog Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/controlling_dialogs.html"><strong aria-hidden="true">2.2.3.</strong> Controlling Dialogs with AGS Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/jumping_dialogs.html"><strong aria-hidden="true">2.2.4.</strong> Jumping Between Dialogs</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/text_parser.html"><strong aria-hidden="true">2.2.5.</strong> Text Parser</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/summary.html"><strong aria-hidden="true">2.2.6.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter9/index.html"><strong aria-hidden="true">2.3.</strong> Chapter 9 - Cutscenes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter9/starting_ending.html"><strong aria-hidden="true">2.3.1.</strong> Starting and Ending Cutscenes</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/game_intro.html"><strong aria-hidden="true">2.3.2.</strong> Creating a Game Intro</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/summary.html"><strong aria-hidden="true">2.3.3.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter10/index.html"><strong aria-hidden="true">2.4.</strong> Chapter 10 - Advanced Topics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter10/nonwindows.html"><strong aria-hidden="true">2.4.1.</strong> Running on non-Windows Systems</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/masks.html"><strong aria-hidden="true">2.4.2.</strong> Importing masks for walkable areas and walk-behinds</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lip_sync.html"><strong aria-hidden="true">2.4.3.</strong> Lip Sync</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/translations.html"><strong aria-hidden="true">2.4.4.</strong> Translations</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/modules_plugins.html"><strong aria-hidden="true">2.4.5.</strong> Modules and Plug-ins</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lighting.html"><strong aria-hidden="true">2.4.6.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/mirror_effect.html"><strong aria-hidden="true">2.4.7.</strong> Mirror Effect</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/earthquake.html"><strong aria-hidden="true">2.4.8.</strong> EARTHQUAKE!!!!!!!!!</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/easter_eggs.html"><strong aria-hidden="true">2.4.9.</strong> Easter Eggs - Wedding dress on Dork!!!! (don't tell George)</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/summary.html"><strong aria-hidden="true">2.4.10.</strong> Summary</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../epilogue/glossary.html">Glossary</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/bibliography.html">Bibliography</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/index.html">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>Appendices - Hallelujah brother</div></li><li class="chapter-item expanded affix "><a href="../../appendices/scripting.html">I - Scripting concepts and basics</a></li><li class="chapter-item expanded affix "><a href="../../appendices/dialog_scripting.html">II - Dialog Scripting</a></li><li class="chapter-item expanded affix "><a href="../../appendices/global_variables.html">III - If we don't hit global variables (or even if we do) we might need to elaborate here.</a></li><li class="chapter-item expanded affix "><a href="../../appendices/plugins.html">IV - Plugins</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="../../redirects/docs.html">AGS Manual</a></li><li class="chapter-item expanded affix "><a href="../../redirects/mdbook.html">Built with mdBook</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Game Design with AGS</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ensadi/AGSBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#room-transitions" id="room-transitions">Room Transitions</a></h1>
+<p>Now that Foxy can go to the different rooms in the shack, we need to talk about something called Room Transitions.  This isn't something that's really a feature of AGS but it's something to keep in mind to give your game a little bit of a professional touch.  Right now, when Foxy walks from room to room, as soon as she passes the room edge, Foxy freezes in place and the game immediately moves to the next room and Foxy instantly jumps to the correct (x, y) coordinates in the new room.</p>
+<p>Let's pretend like we're a player of your game.  We've just entered the shack for the first time and we're exploring a bit and walking around.  We walk Foxy over near the right side of the screen because we want to see something over there, and BOOM!  We cross the right edge of the room and we're suddenly in another room.  If we didn't know that we just crossed the right edge of the screen, we might be a little confused as to why we're suddenly somewhere else.</p>
+<p>A much more elegant alternative would have been, as soon as Foxy crosses the right edge of the screen, she continues to walk off the screen before the room changes and then, when the new room appears, we see Foxy walk into the screen from the left side.  This kind of attention to detail is what will make your game stand out and will give it a bit more of a polished look and feel.</p>
+<p>So, how would we go about doing this?  Well, we've really already outlined what we need to do; we just need to write it into the script.</p>
+<p>There are two things we need to accomplish here.  First, we said that when Foxy crosses the edge of the screen we want her to continue to walk off the screen instead of just freeze in place before the room changes.  And the second thing we want is, when Foxy enters the new room, she should walk in from the left side of the screen.</p>
+<h2><a class="header" href="#walking-off-the-screen" id="walking-off-the-screen">Walking off the screen</a></h2>
+<p>Open the room script for the Main Hall room.  Find the function we created in the last section called <code>room_LeaveRight</code>. Change that function so it looks like this:</p>
+<pre><code class="language-agsscript">function room_LeaveRight()
+{
+  cFoxyMonk.Walk(335, cFoxyMonk.y, eBlock, eAnywhere);
+  cFoxyMonk.ChangeRoom(4, -15, cFoxyMonk.y);
+}
+</code></pre>
+<p>You can probably figure out what that Walk statement does.  This is where we tell Foxy to walk off the right edge of the screen before the room changes.  The first two parameters are the <code>x</code> and <code>y</code> location that we want her to walk to.  We're doing something a little strange with each of these parameters (so pay attention!). Remember back to our background image of this room.  Its dimensions are 320 pixels wide by 200 pixels high.  Why, then, did we choose an x location of 335 to pass to the Walk function?  That's not even within the bounds of the background!  But wait, we want Foxy to walk <em>off the screen</em> before she changes rooms so this is ok.  An x location of 335 will give us this effect. But what about that y location?  What the heck is <code>cFoxyMonk.y</code>? This simply refers to the current y location of Foxy.  By using this value instead of hard-coding a number, she will walk in a horizontal direction as she walks off the edge of the screen.</p>
+<p>The next parameter to the Walk function is the <code>BlockingStyle</code>. This tells AGS whether or not to wait for this command to finish before moving on to the next line of scripting.  There are two possible values you can use here: <code>eBlock</code> and <code>eNoBlock</code>. We're using <code>eBlock</code> in this case, because we don't want Foxy to switch rooms until after she has finished walking.</p>
+<p>Finally, the last parameter, <code>WalkWhere</code>, tells Foxy whether she has to obey the walkable areas we've defined in the room in order to reach her destination.  If we use <code>eWalkableAreas</code> here, then Foxy will only walk on the Walkable areas.  This isn't what we want since we're explicitly telling her to walk off the edge of the screen where there's no walkable area defined. So, we'll use the other option for this parameter, <code>eAnywhere</code>, which allows Foxy to walk anywhere on the screen (or even off the screen!).</p>
+<p>So that takes care of the walking part.  But we also changed the <code>ChangeRoom</code> line. As we learned in a previous section, the <code>ChangeRoom</code> function takes 3 parameters -- namely, a room number, and an x and y location of where she will be in the new room.  The room number didn't change but we did change the x and y location.  We're using an x location of -15 for the same reason we used 335 for x earlier: we want Foxy to walk into the new room from off the screen, so we need to set her x location to be off the left edge of the screen. This will be her starting location in the new room.  The y location doesn't need to change from room to room, so we can just use <code>cFoxyMonk.y</code> for it. So to reiterate:  To walk Foxy <strong>OFF</strong> the screen, tell her to walk completely off the edge of the screen and then set her new (x,y) coordinates (for the new room) also off the screen so that she can start there and walk onto the new screen.  Confused?  Don't worry.  You just need to see it in action, and you'll get it soon enough.</p>
+<h2><a class="header" href="#walking-onto-the-screen" id="walking-onto-the-screen">Walking onto the screen</a></h2>
+<p>So that takes care of walking off the screen.  Now we need to handle the situation where Foxy walks back onto the screen in the new room.  Double click <strong>Edit Room</strong> under <strong>Room 4: Longroom</strong> to bring up the room in the editor.  Now, click on the <strong>Events</strong> button to bring up the events tab, and click the ellipses next to <code>Enters room after fade-in</code>. This will create a new script function called <code>room_AfterFadeIn</code>. Edit that function so it looks like this:</p>
+<pre><code class="language-agsscript">function room_AfterFadeIn()
+{
+  if(cFoxyMonk.PreviousRoom == 2)
+  {
+    cFoxyMonk.Walk(23, cFoxyMonk.y, eBlock, eAnywhere);
+  
+  }
+}
+</code></pre>
+<p>Here, we're doing two things.  First, we're checking to make sure that the room that Foxy was just in was the Main Hall.  If it was, then we're going to have her walk from her current position to somewhere just inside the room.</p>
+<pre><code class="language-agsscript">if (cFoxyMonk.PreviousRoom == 2)
+</code></pre>
+<p>This line does the checking part.  We're using an <code>if</code> statement to look at Foxy's <code>PreviousRoom</code> attribute to see if she was just in the Main Hall (room 2).  Note the use of the double equals signs.  Double equals signs are used for testing equality, so don't let that throw you.</p>
+<p>Next, we have an open curly brace, followed by:</p>
+<pre><code class="language-agsscript">cFoxyMonk.Walk(23, cFoxyMonk.y, eBlock, eAnywhere);
+</code></pre>
+<p>This is our good friend the Walk function again.  This should be familiar now, but just for clarity's sake, I'll explain it briefly.  We're telling Foxy to walk to x location 23 but ensuring that her y location doesn't change so she walks in a straight horizontal line.  We don't want anything else to happen until she gets there so we use <code>eBlock</code> for the <code>BlockingStyle</code>.  And finally, since we're walking outside of our normal walkable areas, we have to use <code>eAnywhere</code> as the <code>WalkWhere</code> parameter.</p>
+<p>That should do it.  Run the game and try it out.  Walk Foxy into the shack then walk to the right to see our transitions in action!  Notice how she walks off the screen to the right, then the screen changes, and we see her walk onto the screen from the left.  Man! How I wish we could do video screenshots!!!</p>
+<h2><a class="header" href="#a-little-scripting-detour" id="a-little-scripting-detour">A Little Scripting Detour...</a></h2>
+<p>So far, our functions have been simple.  You have a name for the function preceded by the word <strong>function</strong>, you follow the name with parentheses, and then you put the statements within curly braces like this:</p>
+<pre><code class="language-plaintext">function myFunction()
+{
+   do something here;
+}
+</code></pre>
+<p>In the preceding sub-section, we introduced something new: the <code>if</code> statement. This statement examines a condition and only does the statements under it if the condition is true.  So to do something only if Foxy is in room 1 we say <code>if(cFoxyMonk.Room == 1)</code>. If we want her to do something if she's in any room <em>except</em> room 1 <code>we say if(cFoxyMonk.Room != 1)</code>. Just like a function, an <code>if</code> statement can be a block.  All the statements in an <code>if</code> block will execute if the <code>if</code> statement is true. Use curly braces to distinguish an <code>if</code> block just like you do with a function, like this:</p>
+<pre><code class="language-plaintext">function myFunction()
+{
+   if(cFoxyMonk.Room == 1)
+   {
+     do something here;
+		do some more;
+   }
+   if(cFoxyMonk.Room != 1)
+   {
+		do something else;
+   }
+}
+</code></pre>
+<p>In this example we do two statements if Foxy is in room 1, and we do one other statement if she's not in room 1.  This would be a good time to introduce the <code>else</code> clause. An <code>if</code> statement can have an <code>else</code> clause that happens only if the <code>if</code> statement is <code>false</code>, like this:</p>
+<pre><code class="language-plaintext">function myFunction()
+{
+   if(cFoxyMonk.Room == 1)
+   {
+     do something here;
+		do some more;
+   }
+   else
+   {
+		do something else;
+   }
+}
+</code></pre>
+<p>This gives us the same function, but we don't have to check the room twice.  If Foxy is in room 1 do the first block, otherwise do the second.</p>
+<blockquote>
+<p><strong>Side Note:</strong> If an <code>if</code> or <code>else</code> clause only has one statement in it, then the curly braces are optional.</p>
+</blockquote>
+<p>Another importan feature of <code>if</code> statements is the <code>else/if</code> block. You can have one or more of these to test for different cases.  Let's say you want to do one thing if Foxy is in room 1, something else if she's in room 2, and something completely different if she's in any other room.  It would look like this:</p>
+<pre><code class="language-plaintext">function myFunction()
+{
+   if(cFoxyMonk.Room == 1)
+   {
+     do something here...
+		do some more...
+   }
+   else if(cFoxyMonk.Room == 2)
+		do something else;
+   else
+		do something completely different;
+}
+</code></pre>
+<p>One last thing to cover about <code>if</code> statements is checking for multiple cases all at once.  Let's say we want to do something if Foxy is in room 1 AND her x coordinate is 35:</p>
+<pre><code class="language-agsscript">if(cFoxyMonk.Room == 1 &amp;&amp; cFoxyMonk.x == 35)
+</code></pre>
+<p>The double ampersand makes the <code>if</code> statement true ONLY if Foxy is in room 1 AND at the x coordinate 35. If we want to do something if EITHER she's in room 1 OR she's in room 2 it would look like this:</p>
+<pre><code class="language-agsscript">if(cFoxyMonk.Room == 1 || cFoxyMonk.Room == 2)
+</code></pre>
+<p>The double pipe ( |  ) symbol is an OR.  The <code>if</code> statement will be true if Foxy is either in room 1 or room 2.</p>
+<p>And finally, here's a table of the tests you can do in an <code>if</code> statement:</p>
+<table width=100%>
+<tr><td><b>Test</b></td><td><b>What</b></td></tr>
+<tr><td>==</td><td>Left term is equal to right term</td></tr>
+<tr><td>!=</td><td>Left term is not equal to right term</td></tr>
+<tr><td>&lt;</td><td>Left term is less than right term</td></tr>
+<tr><td>&gt;</td><td>Left term is greater than right term</td></tr>
+<tr><td>&lt;=</td><td>Left term is less than or equal to right term</td></tr>
+<tr><td>&gt;=</td><td>Left term is greater than or equal to right term</td></tr>
+</table>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../part1/chapter3/scaling.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../part1/chapter3/homework.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../part1/chapter3/scaling.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../part1/chapter3/homework.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
