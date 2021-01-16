@@ -6,9 +6,6 @@ src = "src"
 title = "Game Design with AGS"
 description = "Learn to create games with Adventure Game Studio"
 
-[build]
-build-dir = "docs"
-
 [output.html]
 site-url = "/AGSBook/"
 git-repository-url = "https://github.com/ensadi/AGSBook"
