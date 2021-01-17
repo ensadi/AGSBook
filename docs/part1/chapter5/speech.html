@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Speech - Game Design with AGS</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Learn to create games with Adventure Game Studio">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="../../favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="../../favicon.png">
+        
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">GAME DESIGN WITH AGS</a></li><li class="chapter-item expanded affix "><a href="../../title-page.html">Title Page</a></li><li class="chapter-item expanded affix "><a href="../../copyright.html">Copyright</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../preface/index.html">Preface</a></li><li class="chapter-item expanded affix "><a href="../../preface/dedication.html">Dedication</a></li><li class="chapter-item expanded affix "><a href="../../preface/forward.html">Forward</a></li><li class="chapter-item expanded affix "><a href="../../preface/acknowledgments.html">Acknowledgments</a></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../part1/part1.html"><strong aria-hidden="true">1.</strong> Part I - Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/index.html"><strong aria-hidden="true">1.1.</strong> Chapter 0 (yes, we're programmers)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/introduction.html"><strong aria-hidden="true">1.1.1.</strong> Getting to Know (and love) AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/history.html"><strong aria-hidden="true">1.1.2.</strong> History of the Adventure Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/about.html"><strong aria-hidden="true">1.1.3.</strong> About This Book</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/requirements.html"><strong aria-hidden="true">1.1.4.</strong> System Requirements</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/installing.html"><strong aria-hidden="true">1.1.5.</strong> Installing AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/first_game.html"><strong aria-hidden="true">1.1.6.</strong> Creating Your First Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/running_first_game.html"><strong aria-hidden="true">1.1.7.</strong> Running Your Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/song.html"><strong aria-hidden="true">1.1.8.</strong> Long Beer Song</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/summary.html"><strong aria-hidden="true">1.1.9.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter1/index.html"><strong aria-hidden="true">1.2.</strong> Chapter 1 - The AGS Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter1/editor.html"><strong aria-hidden="true">1.2.1.</strong> The Editor</a></li><li class="chapter-item expanded "><a href="../../part1/chapter1/summary.html"><strong aria-hidden="true">1.2.2.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter2/index.html"><strong aria-hidden="true">1.3.</strong> Chapter 2 - Sprites, Views, and Characters</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter2/sprites.html"><strong aria-hidden="true">1.3.1.</strong> Sprites</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/views.html"><strong aria-hidden="true">1.3.2.</strong> Views</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/characters.html"><strong aria-hidden="true">1.3.3.</strong> Characters</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/summary.html"><strong aria-hidden="true">1.3.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter3/index.html"><strong aria-hidden="true">1.4.</strong> Chapter 3 - Rooms and Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter3/simple_bg.html"><strong aria-hidden="true">1.4.1.</strong> Simple Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walkable_areas.html"><strong aria-hidden="true">1.4.2.</strong> Walkable Areas</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scrolling_bg.html"><strong aria-hidden="true">1.4.3.</strong> Scrolling Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/animating_bg.html"><strong aria-hidden="true">1.4.4.</strong> Animating Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walk_behinds.html"><strong aria-hidden="true">1.4.5.</strong> Walk-Behinds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/regions.html"><strong aria-hidden="true">1.4.6.</strong> Regions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/edges.html"><strong aria-hidden="true">1.4.7.</strong> Room Edges</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/lighting.html"><strong aria-hidden="true">1.4.8.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scaling.html"><strong aria-hidden="true">1.4.9.</strong> Scaling</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/transitions.html"><strong aria-hidden="true">1.4.10.</strong> Room Transitions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/homework.html"><strong aria-hidden="true">1.4.11.</strong> HOMEWORK</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/summary.html"><strong aria-hidden="true">1.4.12.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter4/index.html"><strong aria-hidden="true">1.5.</strong> Chapter 4 - Interacting with Your World</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter4/interaction.html"><strong aria-hidden="true">1.5.1.</strong> Interaction</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/hotspots.html"><strong aria-hidden="true">1.5.2.</strong> Hotspots</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/objects.html"><strong aria-hidden="true">1.5.3.</strong> Objects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/inventory.html"><strong aria-hidden="true">1.5.4.</strong> Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/using_inventory.html"><strong aria-hidden="true">1.5.5.</strong> Using Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/npc.html"><strong aria-hidden="true">1.5.6.</strong> Non-Player Characters (NPC)</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/summary.html"><strong aria-hidden="true">1.5.7.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter5/index.html"><strong aria-hidden="true">1.6.</strong> Chapter 5 - Sounds and Music (Make Some Noise!)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter5/sound_effects.html"><strong aria-hidden="true">1.6.1.</strong> Sound Effects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/bg_music.html"><strong aria-hidden="true">1.6.2.</strong> Background Music</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/speech.html" class="active"><strong aria-hidden="true">1.6.3.</strong> Speech</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/summary.html"><strong aria-hidden="true">1.6.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter6/index.html"><strong aria-hidden="true">1.7.</strong> Chapter 6 - Some Other Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter6/settings.html"><strong aria-hidden="true">1.7.1.</strong> General Settings</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/colors.html"><strong aria-hidden="true">1.7.2.</strong> Colors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/cursors.html"><strong aria-hidden="true">1.7.3.</strong> Mouse Cursors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/summary.html"><strong aria-hidden="true">1.7.4.</strong> Summary</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../part2/part2.html"><strong aria-hidden="true">2.</strong> Part II - Wishing You Were Here!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/index.html"><strong aria-hidden="true">2.1.</strong> Chapter 7 - Timers and Randomization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/timers.html"><strong aria-hidden="true">2.1.1.</strong> Timers</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/timers2.html"><strong aria-hidden="true">2.1.2.</strong> Timers, Take 2</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/randomize.html"><strong aria-hidden="true">2.1.3.</strong> Time to Randomize</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/summary.html"><strong aria-hidden="true">2.1.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/index.html"><strong aria-hidden="true">2.2.</strong> Chapter 8 - Spoken Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/dialog.html"><strong aria-hidden="true">2.2.1.</strong> Creating a Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/fonts.html"><strong aria-hidden="true">2.2.1.1.</strong> Fonts</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/ags_in_dialog.html"><strong aria-hidden="true">2.2.2.</strong> AGS Scripts in Dialog Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/controlling_dialogs.html"><strong aria-hidden="true">2.2.3.</strong> Controlling Dialogs with AGS Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/jumping_dialogs.html"><strong aria-hidden="true">2.2.4.</strong> Jumping Between Dialogs</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/text_parser.html"><strong aria-hidden="true">2.2.5.</strong> Text Parser</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/summary.html"><strong aria-hidden="true">2.2.6.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter9/index.html"><strong aria-hidden="true">2.3.</strong> Chapter 9 - Cutscenes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter9/starting_ending.html"><strong aria-hidden="true">2.3.1.</strong> Starting and Ending Cutscenes</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/game_intro.html"><strong aria-hidden="true">2.3.2.</strong> Creating a Game Intro</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/summary.html"><strong aria-hidden="true">2.3.3.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter10/index.html"><strong aria-hidden="true">2.4.</strong> Chapter 10 - Advanced Topics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter10/nonwindows.html"><strong aria-hidden="true">2.4.1.</strong> Running on non-Windows Systems</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/masks.html"><strong aria-hidden="true">2.4.2.</strong> Importing masks for walkable areas and walk-behinds</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lip_sync.html"><strong aria-hidden="true">2.4.3.</strong> Lip Sync</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/translations.html"><strong aria-hidden="true">2.4.4.</strong> Translations</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/modules_plugins.html"><strong aria-hidden="true">2.4.5.</strong> Modules and Plug-ins</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lighting.html"><strong aria-hidden="true">2.4.6.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/mirror_effect.html"><strong aria-hidden="true">2.4.7.</strong> Mirror Effect</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/earthquake.html"><strong aria-hidden="true">2.4.8.</strong> EARTHQUAKE!!!!!!!!!</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/easter_eggs.html"><strong aria-hidden="true">2.4.9.</strong> Easter Eggs - Wedding dress on Dork!!!! (don't tell George)</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/summary.html"><strong aria-hidden="true">2.4.10.</strong> Summary</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../epilogue/glossary.html">Glossary</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/bibliography.html">Bibliography</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/index.html">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>Appendices - Hallelujah brother</div></li><li class="chapter-item expanded affix "><a href="../../appendices/scripting.html">I - Scripting concepts and basics</a></li><li class="chapter-item expanded affix "><a href="../../appendices/dialog_scripting.html">II - Dialog Scripting</a></li><li class="chapter-item expanded affix "><a href="../../appendices/global_variables.html">III - If we don't hit global variables (or even if we do) we might need to elaborate here.</a></li><li class="chapter-item expanded affix "><a href="../../appendices/plugins.html">IV - Plugins</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="../../redirects/docs.html">AGS Manual</a></li><li class="chapter-item expanded affix "><a href="../../redirects/mdbook.html">Built with mdBook</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">Game Design with AGS</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                        <a href="https://github.com/ensadi/AGSBook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#speech" id="speech">Speech</a></h1>
+<p>Unless you're creating a game like <em>Myst</em>, you'll probably want your characters to be able to say stuff throughout your game.  There are two paradigms when it comes to speech in AGS: there's basic, scripted talking, either in response to events that happen in the game (like when Foxy looks at things or when she breaks the fourth wall by talking to the player) or a linear sequence of conversation between characters (&quot;Hi, Fred!&quot;, &quot;Howdy Billy, how's the weather?&quot;); and then there's the interactive dialog that can occur between characters, where the player is given a choice of conversation topics and can choose which one(s) to talk about and in which order.  We'll be talking about the first kind of speech here; the second kind is called simply &quot;Dialogs&quot; in AGS parlance, and we'll cover that later in <a href="../../part2/chapter8/">Part 2</a>.</p>
+<h2><a class="header" href="#speech-views" id="speech-views">Speech Views</a></h2>
+<p>The first thing we need to do to make Foxy and Dork talk is to create a Speech View for them.  The Speech View is the animation that is displayed for the character when that character is speaking.  AGS automatically uses the character's Speech View anytime the character is saying something, so we don't have to think about it.</p>
+<p>We'll do Foxy's view first, so create a new view for her by right-clicking <strong>Views</strong> in the Project Tree and click <strong>New View</strong>. Name this view <code>vFMSpeech</code>. Go to the Sprites section of the Project Tree and import a new set of sprites by opening the Foxy sprites folder, right clicking in the sprite list, and selecting <strong>Import new sprite from files...</strong>. Find the file called <em>foxy_monk_speech.bmp</em> and import the twelve sprites in that file (if you need a refresher, refer back to <a href="../chapter2/sprites.html">Chapter 2 </a> where we imported our sprites earlier.) Once those sprites have been imported, assign them in groups of three to each of the four loops in the new view you just created.  (Again, if you need help remembering how to do this, refer back to <a href="../chapter2/sprites.html">Chapter 2 </a>.) Finally, open the <code>cFoxyMonk</code> character from the Characters list in the Project Tree, and assign this new view for the Speech View in the Properties as in <a href="#figure52">Figure 5.2</a>. Now, do the same thing for Dork the Duck, using the sprite sheet file <em>DorkSpeech.bmp</em>.</p>
+<p><a name="figure52"></a>
+<span><img src="../../images/setspeechview.png" alt="" /><br><strong>Figure 5.2: Setting the SpeechView</strong></span></p>
+<h2><a class="header" href="#the-say-function" id="the-say-function">The Say Function</a></h2>
+<p>So, let's make Foxy and Dork say something already!  We're going to have a short, scripted conversation between Foxy and Dork.  When the player clicks the &quot;Talk to&quot; mouse cursor on Dork, Foxy will walk over to him, and the following conversation will take place:</p>
+<p><strong>Foxy</strong>: Hi!  My name is Foxy.<br>
+<strong>Dork</strong>: Quack, quack, quack.<br>
+<strong>Foxy</strong>: Oh, I thought you could talk.<br>
+<strong>Dork</strong>: Quaaaaaack!<br>
+<strong>Foxy</strong>: I feel silly talking to a duck.<br>
+<strong>Dork</strong>: Thanks a lot!</p>
+<p>Yeah, it's not great, but it will do for our purposes.</p>
+<p>Create a &quot;Talk to&quot; event for Dork (double-click <code>cDork</code> in the Project Tree, click the <strong>Events</strong> thunderbolt icon, click the &quot;Talk to character&quot; event, and click the ellipses button.) This creates a new function called <code>cDork_Talk</code> in the global script file. The function we'll be using to actually have the characters say stuff is the <code>Say</code> function.  You'll use it like this:</p>
+<pre><code class="language-agsscript">function cDork_Talk()
+{
+  cFoxyMonk.Walk(cDork.x - 20, cDork.y, eBlock, eWalkableAreas);
+  cFoxyMonk.FaceCharacter(cDork);
+  cFoxyMonk.Say(&quot;Hi!  My name is Foxy.&quot;);
+  cDork.Say(&quot;Quack, quack, quack.&quot;);
+  cFoxyMonk.Say(&quot;Oh, I thought you could talk.&quot;);
+  cDork.Say(&quot;Quaaaaaack!&quot;);
+  cFoxyMonk.Say(&quot;I feel silly talking to a duck.&quot;);
+  cDork.Say(&quot;Thanks a lot!&quot;);
+  cDork.Say(&quot;&amp;1 Quack-quack-quack-quack quack-quack-quack-quack!&quot;);
+}
+</code></pre>
+<p>You've seen the first two lines before -- they cause Foxy to walk over to where Dork is and then turn to face him.</p>
+<p>The next 7 lines use the <code>Say</code> function, and we put the text we want the character to say in double quotation marks.  AGS will animate the character with the Speech View while the text is on the screen and stop animating the character when the text goes away.  By default, the text goes away either with a mouse click or after a certain time has passed proportional to the amount of text that is being displayed.  This behavior can be changed, however, in the General Settings, by changing the value of the <code>Allow speech to be skipped by which events property</code>.</p>
+<p>One thing to note is the last line.  Notice that there is a <code>&amp;1</code> and a space right before &quot;Quack-quack-quack-quack quack-quack-quack-quack!&quot; This tells AGS to play the file called <em>Dork1.wav</em> in the <em>Speech</em> folder of your game's folder (see side note.) Unlike importing sounds into the Audio section of the project, you place sound files into that <em>Speech</em> folder. Sound files have a certain naming scheme and must be named after the character that speaks them along with a number.  Note though that you only use the first FOUR letters of the character name.  So, for Dork's sound 1, the file name would be <em>Dork1.wav</em>. This way, you can have actual speech in your game and tell AGS which recording to play just by using the ampersand and a number.  If you had a character named Micheal, his first speech file would be named <em>Mich1.wav</em>.  How simple is that?</p>
+<p>Now to try it out! Find that file and move it into the <em>Speech</em> folder. Run the game and click the Speech mouse cursor on Dork.  You should see the conversation take place, and you should see both characters animate while they are speaking. Furthermore, you should hear Dork quack his last line so turn up the sound.</p>
+<blockquote>
+<p><strong>Side Note:</strong> All speech files should be placed in a folder called <em>Speech</em> that sits alongside other AGS folders like <em>Sprites</em>, and <em>Music</em>. These are folders that are all inside your game's AGS folder.  It's likely that the <em>Speech</em> folder does not exist so you may need to create it.  Note that you DO NOT add speech sound files through the Project Tree like all the other types of sound files.</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="../../part1/chapter5/bg_music.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="../../part1/chapter5/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="../../part1/chapter5/bg_music.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="../../part1/chapter5/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script type="text/javascript">
+            var socket = new WebSocket("ws://localhost:3000/__livereload");
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>

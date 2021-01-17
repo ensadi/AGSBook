@@ -10,6 +10,9 @@ description = "Learn to create games with Adventure Game Studio"
 site-url = "/AGSBook/"
 git-repository-url = "https://github.com/ensadi/AGSBook"
 
+[build]
+build-dir = "docs"
+
 [output.html.search]
 limit-results = 20
 use-boolean-and = true
