@@ -23,6 +23,6 @@ by Dave Ensminger and A. G. Madi
 
 <!-- Named page links below: /-->
 
-[publisher-img]: ../images/ensadilogo.png
+[publisher-img]: ./images/ensadilogo.png
 [publisher-site]: https://ensadi.com/
 
