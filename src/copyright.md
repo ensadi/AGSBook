@@ -2,13 +2,13 @@
 <br/>
 <br/>
 
-First online electronic edition published: 2020
+First online electronic edition published: 2021
 
 <br/>
 <br/>
 <br/>
 
-&copy; 2020, Ensadi LLC
+&copy; 2021, Ensadi LLC
 
 <br/>
 <br/>

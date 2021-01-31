@@ -39,7 +39,7 @@ AGS syncs with the lips and the lip syncing is the thing for AGS without lips.  
 
 ## GUIs
 
-A GUI is a Graphical User Interface.  GUIs allow a user to interact with the game in some way.  It can allow you, as the game creator, to get information from the player of your game by asking questions ([Figure 1.4](#figure14)), getting input from the keyboard ([Figure 1.5](#figure15)), or allowing the player to change game settings ([Figure 1.6](#figure16)). AGS lets you make GUIs for all of these purposes and more.  You can even make GUIs to interact with characters.  You'll have to wait until you get to [Part 2](../../part2/part2.html) for more on this. (NOT KIDDING.  NO PEEKING AHEAD!)
+A GUI is a Graphical User Interface.  GUIs allow a user to interact with the game in some way.  It can allow you, as the game creator, to get information from the player of your game by asking questions ([Figure 1.4](#figure14)), getting input from the keyboard ([Figure 1.5](#figure15)), or allowing the player to change game settings ([Figure 1.6](#figure16)). AGS lets you make GUIs for all of these purposes and more.  You can even make GUIs to interact with characters.  You'll have to wait until you get to [Part 2](../../part2/chapter10/guis.html) for more on this. (NOT KIDDING.  NO PEEKING AHEAD!)
 
 <a name="figure14"></a>
 <span>![](../../images/questiongui.png)<br>**Figure 1.4: Question GUI**</span>

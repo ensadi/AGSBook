@@ -1,4 +1,4 @@
-# Regions (not the bank(this was funny at the time of writing))
+# Regions
 
 A Region is basically a place that the character walks onto and something happens.  That makes no sense; let me try again.  A region can be a spot that triggers an event and/or changes the environment.  For example, you could change the light level or color tint in that region.  You can also trigger events when a player walks INTO the region, OUT OF the region, or is just STANDING in the region.  I believe this could best be explained with an example.  So, guess what?
 
