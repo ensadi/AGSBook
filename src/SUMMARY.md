@@ -88,7 +88,7 @@
 
    * [Chapter 9 - Cutscenes](part2/chapter9/readme.md)
       * [Starting and Ending Cutscenes](part2/chapter9/starting_ending.md)
-      * [Creating a Game Intro](part2/chapter9/game_intro.md)
+      * [Creating a Game Intro and End Credits](part2/chapter9/game_intro.md)
       * [Summary](part2/chapter9/summary.md)
 
    * [Chapter 10 - Advanced Topics](part2/chapter10/readme.md)
@@ -101,7 +101,7 @@
       * [GUIs](part2/chapter10/guis.md)
       * [Mirror Effect](part2/chapter10/mirror_effect.md)
       * [EARTHQUAKE!!!!!!!!!](part2/chapter10/earthquake.md)
-      * [Easter Eggs - Wedding dress on Dork!!!! (don't tell George)](part2/chapter10/easter_eggs.md)
+      * [Easter Eggs - Wedding dress on Dork!!!!](part2/chapter10/easter_eggs.md)
       * [Summary](part2/chapter10/summary.md)
 
 --------------------
