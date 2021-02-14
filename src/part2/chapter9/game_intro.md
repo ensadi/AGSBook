@@ -217,6 +217,10 @@ The second `while` loop is inside the first and it does the actuall scrolling of
 
 You may have noticed that there are `[` characters in our strings. And, if you already ran the game, you probably know that this tells AGS to put whatever is after the `[` character on a new line.  Just thought we'd mention that.
 
+## Homework
+
+Create a GUI/dialog that pops up after the end credits that acts like a menu with choices to start a new game or load a previous game.
+
 ## Just For Fun
 
 Just so that we can get to the credits quickly and for a bit of fun, we're going to change the intro so that the user will get sent straight to the credits if the intro is skipped.  Change the code after the call to `EndCutscene()` in the intro room to the following:

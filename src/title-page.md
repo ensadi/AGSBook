@@ -1,5 +1,6 @@
 # GAME DESIGN WITH AGS
 ## Second Edition
+### Version 1.0
 <br/>
 <br/>
 <br/>

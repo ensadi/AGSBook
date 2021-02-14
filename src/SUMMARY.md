@@ -4,10 +4,10 @@
 
 --------------------
 
-[Preface](preface/README.md)
-[Dedication](preface/dedication.md)
-[Forward](preface/forward.md)
-[Acknowledgments](preface/acknowledgments.md)
+<!--[Preface](preface/README.md)-->
+<!--[Dedication](preface/dedication.md)-->
+<!--[Forward](preface/forward.md)-->
+<!--[Acknowledgments](preface/acknowledgments.md)-->
 
 --------------------
 
@@ -92,15 +92,14 @@
       * [Summary](part2/chapter9/summary.md)
 
    * [Chapter 10 - Advanced Topics](part2/chapter10/readme.md)
-      * [Running on non-Windows Systems](part2/chapter10/nonwindows.md)
       * [Importing masks for walkable areas and walk-behinds](part2/chapter10/masks.md)
       * [Lip Sync](part2/chapter10/lip_sync.md)
-      * [Translations](part2/chapter10/translations.md)
-      * [Modules and Plug-ins](part2/chapter10/modules_plugins.md)
       * [Lighting](part2/chapter10/lighting.md)
       * [GUIs](part2/chapter10/guis.md)
       * [Mirror Effect](part2/chapter10/mirror_effect.md)
       * [EARTHQUAKE!!!!!!!!!](part2/chapter10/earthquake.md)
+      * [Translations](part2/chapter10/translations.md)
+      * [Modules and Plug-ins](part2/chapter10/modules_plugins.md)
       * [Easter Eggs - Wedding dress on Dork!!!!](part2/chapter10/easter_eggs.md)
       * [Summary](part2/chapter10/summary.md)
 
@@ -117,6 +116,7 @@
 [II - Dialog Scripting](appendices/dialog_scripting.md)
 [III - If we don't hit global variables (or even if we do) we might need to elaborate here.](appendices/global_variables.md)
 [IV - Plugins](appendices/plugins.md)
+[V - Running on non-Windows Systems](appendices/nonwindows.md)
 
 --------------------
 
