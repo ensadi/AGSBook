@@ -219,7 +219,7 @@ You may have noticed that there are `[` characters in our strings. And, if you a
 
 ## Homework
 
-Create a GUI/dialog that pops up after the end credits that acts like a menu with choices to start a new game or load a previous game.
+Create a dialog (or GUI) that pops up after the end credits that acts like a menu with choices to start a new game, load a previous game, or quit (hints: `RestartGame()`, `RestoreGameDialog()`).
 
 ## Just For Fun
 
