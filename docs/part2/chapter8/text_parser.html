@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#text-parser" id="text-parser">Text Parser</a></h1>
+                        <h1 id="text-parser"><a class="header" href="#text-parser">Text Parser</a></h1>
 <p>A text parser can be used to obtain text input from a player and perform different actions depending on what the player types in.  AGS has a very nice text parser built in that is simple to use and efficient.</p>
 <blockquote>
 <p><strong>Side Note:</strong> Text parsers can also be used to create a completely text-based games similar to some old games from Sierra like <em>Police Quest</em>.</p>
@@ -183,10 +183,10 @@
 <p>Right-clicking in the words area will bring up a menu of things you can do here, which includes editing a word, adding a synonym for a word, deleting a word, adding a new word, and searching for a word.  Synonyms of words can be added to any of the four types above and deserve a little explanation: let's say there's a duck in your game and the player wants to look at the duck.  The player can type in &quot;<code>look at duck</code>&quot; to get a description.  However, the player could also mistake the duck for a goose (I don't know how that could possibly ever happen though with the awesome sprites we drew of Dork.) So, the player could type in &quot;<code>look at goose.</code>&quot; In this case, we can include &quot;goose&quot; as a synomym for &quot;duck.&quot; We'll include synonyms in our game for practice later.</p>
 <p>The first part, and the hardest part, of customizing the text parser is to sit down and come up with every possible word or phrase that you will need in your game.  Then you have to come up with synonyms of the words or phrases.  Well, you guessed it! We've done this job for you.</p>
 <p>Let's add a little bit of a fun conversation to our game.  And what better way to do this than to add a new room.  This isn't going to be a room that you can walk around in though.  It's going to be a special type of room.  The main character will not be visible in this room.  It won't have walls or doors or anything room-like.  Let's just do this and then you'll understand.</p>
-<h2><a class="header" href="#creating-a-room-that-is-not-a-room" id="creating-a-room-that-is-not-a-room">Creating a room that is not a room</a></h2>
+<h2 id="creating-a-room-that-is-not-a-room"><a class="header" href="#creating-a-room-that-is-not-a-room">Creating a room that is not a room</a></h2>
 <p>Start by adding a new room to your project by right-clicking on <strong>Rooms</strong> in the Project Tree and choosing <strong>New room</strong> then click <strong>OK</strong> when the dialog box comes up. This should create room 5 for us.  Now, edit room 5 and name it <code>HAL</code> (you'll see why). Change the background by choosing the file named <em>HALRoom.png</em>. As you can see, this room only contains a giant red eye.  If you don't know where a giant red eye comes from, then go watch <em>2001: A Space Odyssey</em>. Now, this part is important: find the property named <code>ShowPlayerCharacter</code> in the Properties Pindow and change its value to <code>False</code>. When Foxy goes into this room, she will not be visible, but she will be able to chat with the giant red eye.</p>
 <p>In order for Foxy to chat with the giant red eye, we'll have to give the player a place to type in some text, so we will need to create our first GUI. This will be a quick and dirty GUI to get us going.  We will talk more about making GUIs in a <a href="../chapter10/guis.html">later chapter</a>, so don't worry about it if you don't get it completely.</p>
-<h2><a class="header" href="#creating-our-first-gui" id="creating-our-first-gui">Creating our first GUI</a></h2>
+<h2 id="creating-our-first-gui"><a class="header" href="#creating-our-first-gui">Creating our first GUI</a></h2>
 <p>Start by right-click on <strong>GUIs</strong> in the Project Tree and click on <strong>New GUI</strong>. Name the new GUI <code>gHALTalk</code>. All we need is a place for the player to type in some text and an OK button, so shrink its <code>Height</code> property to <code>30</code> and the Width to <code>300</code>. We also don't want this GUI to show up all the time, so change its <code>Visible</code> property to <code>False</code>. Now if you look at the toolbar, you'll see some buttons that add components to the GUI. Use these buttons to add a text box and a button to the GUI to take up most of the space on it and change the text on the button to  '<code>Talk</code>'. Name the text box <code>txtHAL</code> and the button <code>btnHAL</code>. <a href="#figure87">Figure 8.7</a> shows the toolbar buttons (red arrow) and the final result after adding the button and text box.</p>
 <p><a name="figure87"></a>
 <span><img src="../../images/guihal.png" alt="" /><br><strong>Figure 8.7: Our Simple Text Box GUI</strong></span></p>
@@ -204,7 +204,7 @@
 }
 </code></pre>
 <p>And there you have it.  When Foxy enters the room, the box shows up and when she leaves, the box disappears.  Only two things left to do: Make a way for Foxy to be able to enter this room and write the text parsing code.  We'll leave the text parsing for last since that's our ultimate objective.  Let's create a way for Foxy to get into this room now.</p>
-<h2><a class="header" href="#getting-into-our-not-a-room-room" id="getting-into-our-not-a-room-room">Getting into our not-a-room room</a></h2>
+<h2 id="getting-into-our-not-a-room-room"><a class="header" href="#getting-into-our-not-a-room-room">Getting into our not-a-room room</a></h2>
 <p>Open the Sprites editor and create a new sub-folder called HAL then import the file named <em>HAL.png</em>. Now edit the Longroom and place a new object on the far wall.  Choose our new HAL sprite for this object and postion it towards the bottom of the wall and centered horizontally.  Name the object <code>oHAL</code>. When finished it should look like <a href="#figure88">Figure 8.8</a>.</p>
 <p><a name="figure88"></a>
 <span><img src="../../images/halobject.png" alt="" /><br><strong>Figure 8.8: HAL In The Room</strong></span></p>
@@ -213,7 +213,7 @@
 cFoxyMonk.ChangeRoom(5);
 </code></pre>
 <p>This will make Foxy walk up to the HAL object and then change rooms to the new HAL room.  What this simulates is not changing rooms but walking all the way up to the object and then the player looks through Foxy's eyes.  Now for the fun part: let's talk to the giant red eye.</p>
-<h2><a class="header" href="#parsing-text" id="parsing-text">Parsing Text</a></h2>
+<h2 id="parsing-text"><a class="header" href="#parsing-text">Parsing Text</a></h2>
 <p>Go back to the text parser and add the following words by right-clicking and choosing <strong>Add new word</strong>. Once you click <strong>Add</strong>, you can edit the word in the Properties Pane.</p>
 <pre><code>hello
 what
@@ -307,7 +307,7 @@ else
 }
 </code></pre>
 <p>Put that block right under the similar one asking about the duck.  Notice that the last word is now 'anyword' which is the MatchAnyWord type. So, the text parser will match that to anything we put in there.  Ask Hal to tell you about donuts.</p>
-<h2><a class="header" href="#buttoning-things-up" id="buttoning-things-up">Buttoning Things Up</a></h2>
+<h2 id="buttoning-things-up"><a class="header" href="#buttoning-things-up">Buttoning Things Up</a></h2>
 <p>We would say that now you've got the basic idea of the text parser and can create more complicated conversations.  There are just a few things that need to be taken care of though before we can call this finshed:</p>
 <ol>
 <li>There's no way to exit the Hal room.</li>

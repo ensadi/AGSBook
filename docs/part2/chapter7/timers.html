@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#timers" id="timers">Timers</a></h1>
+                        <h1 id="timers"><a class="header" href="#timers">Timers</a></h1>
 <p>Can you think of a good place in the game so far to create a timer? We can! In the bathroom, of course!  Confused?  Let's say Foxy wanted to use the bathroom.  As it stands, Foxy can open the door to the bathroom and step in.  When she's done looking around, she exits the bathroom and can close the door behind her.  But what if she wanted to close the door while she's in the bathroom; you know, for whatever she may want to do in there.  And, while she's doing her, ahem, business, we can't be telling her to do anything else, and, most importantly, we can't watch!</p>
 <p>The first thing we need to do is to create a way for Foxy to close the door while she's in the bathroom.  Since, most likely, the reason to close the door would be to use the toilet, we should have Foxy close the door when she interacts with the toilet.  Start by creating a hotspot on the toilet to interact with it.</p>
 <p>Edit the bathroom by double-clicking <strong>Edit room</strong> under Rooms and Bathroom in the Project Tree.  Choose to view <strong>Hotsposts</strong> and <code>hHotspot1</code> and use the line tool to outline and fill in the toilet as in <a href="#figure71">Figure 7.1</a>. This will create <code>Hotspot 1</code> in the room. Change the hotspot's description to <code>Toilet</code> and name it <code>hToilet</code>.</p>
@@ -194,7 +194,7 @@
 }
 </code></pre>
 <p>The Move function should already be familiar to you.  The first thing we do is move the door down to close it.  The last thing we do is move the door back up.  The middle is the interesting part. We call the <code>Wait()</code> function. That function does exactly what it says, it waits.  How long it waits depends on the number we pass in, which should be in game loops.  Since there are 40 game loops a second, we tell it to wait 200 game loops, or 5 seconds. Easy as pi.  Well actually pi is 3.1415 so that would screw everything up.  Don't use pi.</p>
-<h2><a class="header" href="#homework" id="homework">HOMEWORK</a></h2>
+<h2 id="homework"><a class="header" href="#homework">HOMEWORK</a></h2>
 <p>Add a toilet flushing sound before the door opens. We made a sound for you to use.</p>
 
                     </main>

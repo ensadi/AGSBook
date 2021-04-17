@@ -167,9 +167,9 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#general-settings" id="general-settings">General Settings</a></h1>
+                        <h1 id="general-settings"><a class="header" href="#general-settings">General Settings</a></h1>
 <p>We briefly touched the General Settings editor at the beginning of this book and promised you that we'll get to it in Chapter 6.  Well, we like to keep our promises, and according to the URL of this page, this is Chapter 6. The General Settings editor can be accessed by double-clicking it from the Project Tree just like any of the other editors.  This editor allows you to specify some of the basic settings for your game, like the resolution, the name, the maximum score the player can achieve, and some other interesting things.  There are lots of options but we're only going to talk about some of them.  We'll talk about other ones as we get to them in later chapters.</p>
-<h2><a class="header" href="#basic-properties-section" id="basic-properties-section">(Basic properties) Section</a></h2>
+<h2 id="basic-properties-section"><a class="header" href="#basic-properties-section">(Basic properties) Section</a></h2>
 <p>This section of the General Settings editor sets up generic things about the game itself.</p>
 <ul>
 <li>Color depth -- The color depth setting tells AGS how to interpret your images. The higher the color depth the more colors you can have.  If you set your game to 16-bit color depth, then you shouldn't make any 32-bit drawings to import. </li>
@@ -178,13 +178,13 @@
 <li>Old-style letterbox mode -- Make this <code>True</code> to show a black ribbon across the top and bottom of the screen.  Why? Because you want to.</li>
 <li>Resolution -- This is the width and height of your game.  Whatever you decide to set this to is what your backgrounds should be drawn with.</li>
 </ul>
-<h2><a class="header" href="#character-movement-section" id="character-movement-section">Character movement Section</a></h2>
+<h2 id="character-movement-section"><a class="header" href="#character-movement-section">Character movement Section</a></h2>
 <p>This section sets up how the character reacts to movement.</p>
 <ul>
 <li>Characters turn before walking -- Setting this to True will make the characters look like they're actually turning to face a new direction and then start walking.  For example, if the main character is facing down and you click above it using the walk icon, it'll change to the <strong>side</strong> loop then the <strong>up</strong> loop before starting to walk.  If the setting was <code>False</code>, the character will immediately go from the <strong>down</strong> loop to the <strong>up</strong> loop before starting to walk.</li>
 <li>Characters turn to face direction -- This setting is just like the one above except it's used with the function <code>FaceLocation()</code>. If this is <code>True</code>, then when <code>FaceLocation()</code> is called, the character will go through the proper loops in the view to turn to face the new location.  If it's <code>False</code>, then the character will simply change to the new loop immediately.</li>
 </ul>
-<h2><a class="header" href="#compiler-section" id="compiler-section">Compiler Section</a></h2>
+<h2 id="compiler-section"><a class="header" href="#compiler-section">Compiler Section</a></h2>
 <p>This section sets up how the game executable is created.  The executable is the main file that you double-click to start the game and ends in a <em>.exe</em> extension (usually). Compiling is the process by which AGS will read the game data that you've input and the scripts that you've written and put them together (compile them) into a file that is the game itself, which is the game executable. Dave wrote the game executable, and it's the best damn executable ever written, because Dave is such an awesome programmer.  He's a much better programmer than George, that's for sure.  Wait! What?  That's odd since George is writing this section.<br>Hmmm.</p>
 <ul>
 <li>Compress the sprite file -- If you have a large number of sprites in your game, you could end up with a quite large executable.  Turn this option on and your executable will shrink.  Be forewarned though, the game will run a bit slower because it has to uncompress the sprites when it needs them.  At least I think that's what this option does!</li>
@@ -199,7 +199,7 @@
 </li>
 <li>Split resource files into X MB-sized chunks -- Normally, when you compile your game, all the resources (like the sprites for instance) are placed into the executable.  Therefore, the whole game fits into one file.  If that file is too large, then you can split the resources out of it and make them into their own files.  This way, users can download small files instead of one large file.  The files will be split into MB (Megabyte) sections designated by the number you put here.</li>
 </ul>
-<h2><a class="header" href="#inventory-section" id="inventory-section">Inventory Section</a></h2>
+<h2 id="inventory-section"><a class="header" href="#inventory-section">Inventory Section</a></h2>
 <p>This section has a few settings that change the way the inventory looks and feels.</p>
 <ul>
 <li>Display multiple icons for multiple items -- Setting this option to <code>True</code> will show multiple icons in the inventory window if you have more than one of a certain item.  So, if there are three strawberries, and you pick up all three strawberries, you will see three pictures of the strawberries in the inventory window.  If this is <code>False</code>, then you'll only see one picture of a strawberry and you'll have to keep track of how many the character actually has in the code. If you want to show some items as multiples and some not, then you'll need to set this to <code>False</code> and create multiple objects in your game that represent the same thing.  Assign those objects the same sprites but give them different variable names (like <code>oStrawberry1</code> and <code>oStrawberry2</code> for example).  Then you can show both objects in the inventory window whereas others will appear only once.</li>
@@ -207,17 +207,17 @@
 <li>Inventory item cursor hotspot marker -- This option allows you to place a crosshair or other image on inventory items.  The crosshair will appear at the point on the item that you use as the clicking point.  You can have AGS draw a crosshair for you, or you can draw your own and assign it to it.</li>
 <li>Use selected inventory graphic for cursor -- If you keep this <code>True</code>, then the cursor will change to the item that you chose.  Depending of course on what you set as your cursor image in the inventory editor.  If you set it to <code>False</code>, then the cursor will always look like the default no matter what inventory item you choose.</li>
 </ul>
-<h2><a class="header" href="#saved-games-section" id="saved-games-section">Saved Games Section</a></h2>
+<h2 id="saved-games-section"><a class="header" href="#saved-games-section">Saved Games Section</a></h2>
 <p>This section deals with how games are saved and how the computer will treat them.</p>
 <ul>
 <li>Save games folder name -- When a player saves a game it will go into a folder. Normally this folder will be called the same name as the game, but you can change it here if you like.</li>
 <li>Save screenshots in save games -- Turning this on will take a snapshot of were the player is and save it into the saved game file.  That way a screen shot will appear in the file/game explorer of the current position in the game.</li>
 </ul>
-<h2><a class="header" href="#sound-section" id="sound-section">Sound Section</a></h2>
+<h2 id="sound-section"><a class="header" href="#sound-section">Sound Section</a></h2>
 <ul>
 <li>Play sound when the player gets points -- Give this option a sound and it will play it whenever you use the <code>GiveScore()</code> function to add to the player's score.</li>
 </ul>
-<h2><a class="header" href="#text-output-section" id="text-output-section">Text output Section</a></h2>
+<h2 id="text-output-section"><a class="header" href="#text-output-section">Text output Section</a></h2>
 <p>This section deals with how text and speech are shown in the game.</p>
 <ul>
 <li>Always display text as speech -- If this option is on then anything displayed with the <code>Display()</code> function will appear as speech said by the main character. If it's off, then the text will just appear in the middle of the screen. </li>
@@ -226,7 +226,7 @@
 <li>Custom thought bubble GUI -- Just like the option above, this option will set a GUI to use for thinking.  Using the <code>Character.Think()</code> function (for example: <code>cFoxyMonk.Think(&quot;Man I'm hot in this robe!&quot;)</code>) will show the thought text using this GUI.</li>
 <li>Write game text Right-to-left -- If you translate your game to a right-to-left language, set this to <code>True</code> to make the text appear from right to left instead of left to right.</li>
 </ul>
-<h2><a class="header" href="#visual-section" id="visual-section">Visual Section</a></h2>
+<h2 id="visual-section"><a class="header" href="#visual-section">Visual Section</a></h2>
 <ul>
 <li>Default transition when changing rooms -- Transitions are fun to play with. AGS can change what transitions are used to go from room to room.  By default, it fades out the old room and then fades in the new one.  That's ok for most people.  However, it also has the following options:
 <ul>

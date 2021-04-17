@@ -167,12 +167,12 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#creating-a-game-intro-and-end-credits" id="creating-a-game-intro-and-end-credits">Creating a Game Intro and End Credits</a></h1>
+                        <h1 id="creating-a-game-intro-and-end-credits"><a class="header" href="#creating-a-game-intro-and-end-credits">Creating a Game Intro and End Credits</a></h1>
 <p>Although cutscenes can be placed just about anywhere in a game, the best way to do an intro is to create a new room for it instead of plopping it as part of the game's first room.  Yep, that's right! We're making a new room.  This is going to be a special room though, like the one we made for iHal.</p>
 <p>Start by adding a new room to the game.  In our case this is going to be room number 6.  Open the room in the room editor and give it the name <code>Intro</code>. And that's it. We have a room to use as our intro; not much to it.</p>
 <p>Since this is the intro room, we will want the main character to start here.  The first room that loads is always the room that is set as the starting room of the main character.</p>
 <p>Expand the Characters node in the Project Tree and double-click on <strong>cFoxyMonk</strong> to edit Foxy's character.  Change Foxy's <code>StartingRoom</code> to 6. Running the game now will show the black intro screen and Foxy just standing there.  Since there are no walkable areas, Foxy won't be able to move, and won't be able to travel to another room. But that's ok. We're going to create a cutscene in this room that will move Foxy to room 1 after it plays through.</p>
-<h2><a class="header" href="#the-cutscene" id="the-cutscene">The Cutscene</a></h2>
+<h2 id="the-cutscene"><a class="header" href="#the-cutscene">The Cutscene</a></h2>
 <p>In order to make the cutscene we will use the 'after fade in' function that is available to us in each room.  We'll create a function for the 'after fade in' event and put all of our cutscene code in it.  This way, when the room loads, the function will run and the cutscene will play through.  At the end of the cutscene we will change rooms to room 1.</p>
 <p>Go back to editing room 6.  Click the lightning bolt to show the room events and then click the ellipses next to <code>Enters room after fade-in</code> to create the function.  See <a href="#figure91">Figure 9.1</a>.</p>
 <p><a name="figure91"></a>
@@ -192,7 +192,7 @@
 <pre><code class="language-agsscript">cFoxyMonk.Say(&quot;&amp;1 Hi, I'm Foxy. Welcome to Foxy's Quest!&quot;);
 </code></pre>
 <p>The <code>&amp;1</code> will tell AGS to play the <em>Foxy1.wav</em> file while the speech is displayed. Run this and watch it.  Then run it again and click the mouse or press a button before the speech is done and it should be skipped.  And that is the simplest cutscene in the world.</p>
-<h2><a class="header" href="#overlays" id="overlays">Overlays</a></h2>
+<h2 id="overlays"><a class="header" href="#overlays">Overlays</a></h2>
 <p>We'll move away a bit from the cutscene now to introduce overlays.  Since we're making an intro, this would be a good place for it.  Overlays can be either text or graphical and when placed on the screen are always on top of everything else.</p>
 <p>Let's create a few overlays to show the game's name and authors on the screen.  The name of the game will be a graphical overlay and the authors' names will be text overlays.</p>
 <p>Start by going to the sprites editor and importing the file named <em>GameNameOverlay.png</em>. This is an image we created for the name of the game.  If you don't like it, well, make your own then.  Just remember, it needs to fit the screen.  We created a sub-folder under Sprites named <em>Overlays</em> in which to put the image, just so we can keep everything organized.  Our image was placed in slot 75 in the Sprites editor.  Yours may be different.</p>
@@ -249,7 +249,7 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
   cFoxyMonk.ChangeRoom(1);
 }
 </code></pre>
-<h2><a class="header" href="#endcutscene" id="endcutscene">EndCutscene()</a></h2>
+<h2 id="endcutscene"><a class="header" href="#endcutscene">EndCutscene()</a></h2>
 <p>The <code>EndCutscene()</code> function needs to be examined a little closer since it actually returns a value. If you recall, the function will return a 0 if the player actually watched the entire cutscene and 1 if the player skipped it.  We're going to use this value to yell at the player for skipping our cutscene.</p>
 <p>are an integer variable at the top of the intro function and call it <code>iYellAtPlayer</code>:</p>
 <pre><code class="language-agsscript">int iYellAtPlayer;
@@ -267,7 +267,7 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
 }
 </code></pre>
 <p>Now, when you skip the intro, you'll get yelled at.  Notice also that Foxy will end up at the final position no matter when the intro is skipped.  Remember that's because when a player skips a cutscene, AGS actually fast forwards through it and executes every instruction in there really fast.</p>
-<h2><a class="header" href="#colors" id="colors">Colors</a></h2>
+<h2 id="colors"><a class="header" href="#colors">Colors</a></h2>
 <p>Remember the color that we passed in to the <code>Overlay.CreateTextual()</code> function?  Well, there are a lot of colors that you can pass in, and there is an easy way to find those colors.</p>
 <p>Look in the Project Tree and you should see a <strong>colours</strong> option. Double-clicking this option will bring up the Colors editor.   We're not going to concern ourselves with creating color, but we are going to use the handy <strong>Colour Finder</strong>, which will be the second tab of the editor, as seen in <a href="#figure92">Figure 9.2</a>.</p>
 <p><a name="figure92"></a>
@@ -276,7 +276,7 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
 <p><a name="figure93"></a>
 <span><img src="../../images/colordialog.png" alt="" /><br><strong>Figure 9.3: Windows Color Dialog</strong></span></p>
 <p>You can use this dialog to find the Red, Green, Blue values of a color, then go back to the sliders to set that color and get the number to plug into the <code>Overlay.CreateTextual()</code> function.</p>
-<h2><a class="header" href="#end-credits" id="end-credits">End Credits</a></h2>
+<h2 id="end-credits"><a class="header" href="#end-credits">End Credits</a></h2>
 <p>Since we have an intro, we think it would only be fitting to also have some end credits.  Creating end credits is just as simple as creating an intro.  We will create a new room and put a cutscene in it.  Let's dive right in.</p>
 <p>Create a new room and call it <strong>End Credits</strong>. Set the <code>ShowPlayerCharacter</code> option to <code>False</code>, because we don't need to see Foxy when the credits are rolling.  Now, create a function for the room's after fade-in event and create a cutscene in that function.  This is very much just like making the intro.  In the cutscene, we're going to create a text overlay and scroll it up the screen with whatever text we want in it.</p>
 <p>The two important things that we need in order to scroll the credits are changing the position of the text overlay and changing the text of the text overlay. To change the position, we set the text overlay's x and y values; to change the text, we call the text overlay's <code>SetText()</code> function.  The <code>SetText()</code> function takes the overlay width, font type, color, and text as parameters.  These are the same parameters that <code>Overlay.CreateTextual()</code> takes except for the x and y coordinates. The code follows:</p>
@@ -323,9 +323,9 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
 <p>We are going to use 2, separate, <code>while</code> loops: One loop will be used to change the text of the overlay, and the other loop will be used to move the overlay up on the screen.   The first loop will run 5 times because we have 5 text overlays that we want to show: The name of the game, 'Written by', 'Produced by', 'Directed by', and 'Voiced by'. So, we set a variable, <code>i</code>, equal to zero to start out and we tell AGS to run the code in the <code>while</code> loop WHILE <code>i</code> is less than 5, and each time through the loop we call <code>i++</code>, which is scripting talk for adding 1 to the <code>i</code> variable. This gives us five loops when <code>i</code> is 0, 1, 2, 3, and 4. As soon as <code>i</code> reaches 5, the <code>while(i &lt; 5)</code> will be <code>false</code> and the loop will end.  By the way, everything between the <code>{</code> and <code>}</code> gets done each time through the loop. So, this outer while loop will scroll the overlay up the screen, change the overlay's text depending on what the <code>i</code> variable is, add 1 to <code>i</code>, and start over.</p>
 <p>The second <code>while</code> loop is inside the first and it does the actuall scrolling of the overlay up the screen.  Each time through the loop we subtract 1 from the Y coordinate of the overlay, which moves it up a pixel, and we wait for 1 game loop, so the overlay doesn't just fly up the screen.  (In fact, take the wait out and you won't even see any scrolling because the overlay will move so fast.) We do this while the Y coordinate is grater than -30.  Why -30 you ask; because that way it scrolls completely off the screen and puts a bit of a pause between each subsequent overlay scroll.</p>
 <p>You may have noticed that there are <code>[</code> characters in our strings. And, if you already ran the game, you probably know that this tells AGS to put whatever is after the <code>[</code> character on a new line.  Just thought we'd mention that.</p>
-<h2><a class="header" href="#homework" id="homework">Homework</a></h2>
+<h2 id="homework"><a class="header" href="#homework">Homework</a></h2>
 <p>Create a dialog (or GUI) that pops up after the end credits that acts like a menu with choices to start a new game, load a previous game, or quit (hints: <code>RestartGame()</code>, <code>RestoreGameDialog()</code>).</p>
-<h2><a class="header" href="#just-for-fun" id="just-for-fun">Just For Fun</a></h2>
+<h2 id="just-for-fun"><a class="header" href="#just-for-fun">Just For Fun</a></h2>
 <p>Just so that we can get to the credits quickly and for a bit of fun, we're going to change the intro so that the user will get sent straight to the credits if the intro is skipped.  Change the code after the call to <code>EndCutscene()</code> in the intro room to the following:</p>
 <pre><code class="language-agsscript">if(iYellAtPlayer == 1)
 {

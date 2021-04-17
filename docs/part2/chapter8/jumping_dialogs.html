@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#jumping-between-dialogs" id="jumping-between-dialogs">Jumping Between Dialogs</a></h1>
+                        <h1 id="jumping-between-dialogs"><a class="header" href="#jumping-between-dialogs">Jumping Between Dialogs</a></h1>
 <p>Depending on your game, you may have just one conversation, like our game does now, or you may have many different conversations.  AGS provides a good way to switch between conversations using the <code>goto-dialog</code> and <code>goto-previous</code> script commands.</p>
 <p>Let's add another conversation to our game and see how these commands work.
 We'll have Dork tell us more about himself.  Start by adding a new option to our dialog by replacing Option 4 with the text &quot;<code>So, tell me more about yourself.</code>&quot; and uncheck the <strong>Show</strong> checkbox but check the <strong>Say</strong> checkbox. Change the <code>stop</code> for Option 4 to <code>return</code> and add a 5<sup>th</sup> option with the text &quot;<code>End conversation</code>&quot; and uncheck the <strong>Say</strong> checkbox and check the <strong>Show</strong> checkbox. Change the 5<sup>th</sup> option's <code>return</code> keyword to <code>stop</code>. Add <code>option-on 4</code> in the <code>@1</code> section to turn this new option on after getting Dork's name.  In the right pane, replace the <code>return</code> keyword under the <code>@4</code> symbol with the following line.</p>
@@ -229,7 +229,7 @@ return
 <pre><code>goto-previous
 </code></pre>
 <p>Be sure to indent the <code>Wait()</code> function in the first response because it's AGS Script and not Dialog Script.  As you can see, each time one of the options is chosen it's turned off.  There's no reason to ask the same question over and over again. The last option simply returns to the previous dialog by using the goto-previous Dialog Script command.</p>
-<h2><a class="header" href="#jumping-between-dialogs-with-ags-script" id="jumping-between-dialogs-with-ags-script">Jumping Between Dialogs with AGS Script</a></h2>
+<h2 id="jumping-between-dialogs-with-ags-script"><a class="header" href="#jumping-between-dialogs-with-ags-script">Jumping Between Dialogs with AGS Script</a></h2>
 <p>Analogous to the <code>goto-dialog</code> and <code>goto-previous</code> script commands for switching between dialogs, there are some predefined constant return values that can be used in AGS Scripts that are embedded in Dialog Scripts. The three values available are <code>RUN_DIALOG_GOTO_PREVIOUS</code>, <code>RUN_DIALOG_RETURN</code> and <code>RUN_DIALOG_STOP_DIALOG</code>.  <code>RUN_DIALOG_GOTO_PREVIOUS</code> goes back to the previous dialog just like <code>goto-previous</code> does in Dialog Scripts; <code>RUN_DIALOG_RETURN</code> goes back to the current conversation just like the <code>return</code> keyword does in Dialog Scripts; and <code>RUN_DIALOG_STOP_DIALOG</code> stops the dialog just like the <code>stop</code> keyword would.  These will be easier to understand with an example.</p>
 <p>Let's modify Dork's dialog to use one of these return values.  Go to the dialog editor and delete the line &quot;<code>cDork: Well, what would you like to know?</code>&quot; between the <code>@S</code> symbol and the <code>return</code> keyword, and replace it with the following code:</p>
 <pre><code class="language-agsscript">if(dAboutDork.GetOptionState(1) == eOptionOff &amp;&amp;

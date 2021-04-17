@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#background-music" id="background-music">Background Music</a></h1>
+                        <h1 id="background-music"><a class="header" href="#background-music">Background Music</a></h1>
 <p>Background music can give a nice ambiance to any room.  Just like in the movies, proper background music can convey different feelings and change a player's mood.  Let's add some background music to the long, dark, hall to make it seem a bit scary.  Find the file named <em>music1.mid</em>. Open the Audio properties in the Project Tree and right-click on Music to add it (name it <code>aMusic1</code>.)</p>
 <p>Now let's add the music with scripting.  Go to the Longroom's script and find the <code>room_AfterFadeIn</code> function. Add the following 2 lines to the top of the function:</p>
 <pre><code class="language-agsscript">AudioChannel *myChannel = aMusic1.Play(eAudioPriorityNormal);

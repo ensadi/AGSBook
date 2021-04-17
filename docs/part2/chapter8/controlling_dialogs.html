@@ -167,7 +167,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1><a class="header" href="#controlling-dialogs-with-ags-scripts" id="controlling-dialogs-with-ags-scripts">Controlling Dialogs with AGS Scripts</a></h1>
+                        <h1 id="controlling-dialogs-with-ags-scripts"><a class="header" href="#controlling-dialogs-with-ags-scripts">Controlling Dialogs with AGS Scripts</a></h1>
 <p>We can use the <code>SetOptionState()</code> function from within AGS Scripts to turn dialog ptions on and off. We will need to do this when Foxy knocks the apple down.  Here's the thought process.  When the game starts, that option needs to be hidden because Foxy can't ask Dork about the apple until she gets his name.  It's rude otherwise.  If Foxy knocks the apple down before talking to Dork, the option doesn't need to come on after she gets his name, or at all. If Foxy talks to Dork before knocking the apple down, then the option needs to come on.  If Foxy knocks the apple down after talking to Dork, the option needs to turn off and not come on again.</p>
 <p>Find the function <code>oApple_UseInv()</code> in room 1's script file.  Right above the last line of code, which contains the <code>Display(&quot;Good shot...&quot;)</code> function, put the following line:</p>
 <pre><code class="language-agsscript">dDialog0.SetOptionState(3, eOptionOffForever);
