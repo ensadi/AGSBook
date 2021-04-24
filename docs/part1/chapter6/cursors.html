@@ -175,6 +175,13 @@
 <p><strong>Side Note:</strong> We chose to import new sprites and not to replace the cursors already in there, but that is an option, of course.</p>
 </blockquote>
 <p>When the sprites are imported, all that is left to do is to open up <strong>Mouse cursors</strong> in the Project Tree and double-click on <strong>0:Walk to</strong>. Then, in the Properties Pane change the <code>Image</code> property to the number for your new sprite.  Do the same thing for the <strong>1:Look at</strong> cursor.  And, that's it! Run the game and check out the new cursors.</p>
+<blockquote>
+<p><strong>Side Note:</strong> You can set the cursor's hotspot, or the spot that needs to be touching what is being clicked. By default this is the top-left corner, but you can click the sprite to change it, or set the coordinates in the Properties Pane.</p>
+</blockquote>
+<h2 id="animated-cursors"><a class="header" href="#animated-cursors">Animated Cursors</a></h2>
+<p>Why have normal, boring, old cursors, when you can make them move?! That's right, let's make an animated cursor.  If you decide to make an animated cursor, keep in mind that the player will be looking at the cursor a lot, so keep them subtle and try not to annoy the player.</p>
+<p>Making a cursor animate is very simple.  All you have to do is create some sprites, use the sprites to create a view, then associate that view with the cursor.  You alreay learned how to import sprites and create views, so either go ahead and make your own, or use the sprites we made in the file <em>foxywalkcursoranimated.png</em>. </p>
+<p>Use the Sprites editor to import the sprites, then use the Views editor to create a new view called <code>vFMWalkCursor</code>.  We imported our sprites into a new folder under <strong>Main</strong> called <em>Animated Cursors</em> just to keep them separate.  Once the view is ready, go back to <strong>Mouse cursors</strong> in the Project Tree and double-click on <strong>0:Walk to</strong> (or whichever view you want to chancge.)  In the Properties Pane, notice that there is an <code>Animate</code> property.  Set this to <code>True</code> then set the <code>View</code> property to the number of the new view that you created.  That should do it! Run the game and check it out.</p>
 
                     </main>
 
