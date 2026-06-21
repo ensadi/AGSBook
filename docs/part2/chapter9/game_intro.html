@@ -1,63 +1,63 @@
 <!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js light">
+<html lang="en" class="light sidebar-visible" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>Creating a Game Intro and End Credits - Game Design with AGS</title>
-        
-        
 
 
         <!-- Custom HTML head -->
-        
 
-
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Learn to create games with Adventure Game Studio">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
-        
-        <link rel="icon" href="../../favicon.svg">
-        
-        
-        <link rel="shortcut icon" href="../../favicon.png">
-        
-        <link rel="stylesheet" href="../../css/variables.css">
-        <link rel="stylesheet" href="../../css/general.css">
-        <link rel="stylesheet" href="../../css/chrome.css">
-        
-        <link rel="stylesheet" href="../../css/print.css" media="print">
-        
+        <link rel="icon" href="../../favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="../../favicon-8114d1fc.png">
+        <link rel="stylesheet" href="../../css/variables-8adf115d.css">
+        <link rel="stylesheet" href="../../css/general-0392ca55.css">
+        <link rel="stylesheet" href="../../css/chrome-fc474251.css">
+        <link rel="stylesheet" href="../../css/print-9e4910d8.css" media="print">
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
-        
-        <link rel="stylesheet" href="../../fonts/fonts.css">
-        
+        <link rel="stylesheet" href="../../fonts/fonts-9644e21d.css">
 
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="../../highlight.css">
-        <link rel="stylesheet" href="../../tomorrow-night.css">
-        <link rel="stylesheet" href="../../ayu-highlight.css">
+        <link rel="stylesheet" id="mdbook-highlight-css" href="../../highlight-bae637a6.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="../../tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="../../ayu-highlight-3fdfc3ac.css">
 
         <!-- Custom theme stylesheets -->
-        
 
-        
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "../../searchindex-61bb3dbf.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc-ec25fb1d.js"></script>
     </head>
     <body>
-        <!-- Provide site root to javascript -->
-        <script type="text/javascript">
-            var path_to_root = "../../";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
-        </script>
-
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
         <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script type="text/javascript">
+        <script>
             try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
 
                 if (theme.startsWith('"') && theme.endsWith('"')) {
                     localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
@@ -70,114 +70,124 @@
         </script>
 
         <!-- Set the theme before any content is loaded, prevents flash -->
-        <script type="text/javascript">
-            var theme;
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
+            const html = document.documentElement;
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            html.classList.add("js");
         </script>
 
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
         <!-- Hide / unhide sidebar before it is displayed -->
-        <script type="text/javascript">
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
         </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../../index.html">GAME DESIGN WITH AGS</a></li><li class="chapter-item expanded affix "><a href="../../title-page.html">Title Page</a></li><li class="chapter-item expanded affix "><a href="../../copyright.html">Copyright</a></li><li class="spacer"></li><li class="spacer"></li><li class="chapter-item expanded "><a href="../../part1/part1.html"><strong aria-hidden="true">1.</strong> Part I - Getting Started</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/index.html"><strong aria-hidden="true">1.1.</strong> Chapter 0 (yes, we're programmers)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter0/introduction.html"><strong aria-hidden="true">1.1.1.</strong> Getting to Know (and love) AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/history.html"><strong aria-hidden="true">1.1.2.</strong> History of the Adventure Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/about.html"><strong aria-hidden="true">1.1.3.</strong> About This Book</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/requirements.html"><strong aria-hidden="true">1.1.4.</strong> System Requirements</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/installing.html"><strong aria-hidden="true">1.1.5.</strong> Installing AGS</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/first_game.html"><strong aria-hidden="true">1.1.6.</strong> Creating Your First Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/running_first_game.html"><strong aria-hidden="true">1.1.7.</strong> Running Your Game</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/song.html"><strong aria-hidden="true">1.1.8.</strong> Long Beer Song</a></li><li class="chapter-item expanded "><a href="../../part1/chapter0/summary.html"><strong aria-hidden="true">1.1.9.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter1/index.html"><strong aria-hidden="true">1.2.</strong> Chapter 1 - The AGS Editor</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter1/editor.html"><strong aria-hidden="true">1.2.1.</strong> The Editor</a></li><li class="chapter-item expanded "><a href="../../part1/chapter1/summary.html"><strong aria-hidden="true">1.2.2.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter2/index.html"><strong aria-hidden="true">1.3.</strong> Chapter 2 - Sprites, Views, and Characters</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter2/sprites.html"><strong aria-hidden="true">1.3.1.</strong> Sprites</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/views.html"><strong aria-hidden="true">1.3.2.</strong> Views</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/characters.html"><strong aria-hidden="true">1.3.3.</strong> Characters</a></li><li class="chapter-item expanded "><a href="../../part1/chapter2/summary.html"><strong aria-hidden="true">1.3.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter3/index.html"><strong aria-hidden="true">1.4.</strong> Chapter 3 - Rooms and Events</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter3/simple_bg.html"><strong aria-hidden="true">1.4.1.</strong> Simple Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walkable_areas.html"><strong aria-hidden="true">1.4.2.</strong> Walkable Areas</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scrolling_bg.html"><strong aria-hidden="true">1.4.3.</strong> Scrolling Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/animating_bg.html"><strong aria-hidden="true">1.4.4.</strong> Animating Backgrounds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/walk_behinds.html"><strong aria-hidden="true">1.4.5.</strong> Walk-Behinds</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/regions.html"><strong aria-hidden="true">1.4.6.</strong> Regions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/edges.html"><strong aria-hidden="true">1.4.7.</strong> Room Edges</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/lighting.html"><strong aria-hidden="true">1.4.8.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/scaling.html"><strong aria-hidden="true">1.4.9.</strong> Scaling</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/transitions.html"><strong aria-hidden="true">1.4.10.</strong> Room Transitions</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/homework.html"><strong aria-hidden="true">1.4.11.</strong> HOMEWORK</a></li><li class="chapter-item expanded "><a href="../../part1/chapter3/summary.html"><strong aria-hidden="true">1.4.12.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter4/index.html"><strong aria-hidden="true">1.5.</strong> Chapter 4 - Interacting with Your World</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter4/interaction.html"><strong aria-hidden="true">1.5.1.</strong> Interaction</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/hotspots.html"><strong aria-hidden="true">1.5.2.</strong> Hotspots</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/objects.html"><strong aria-hidden="true">1.5.3.</strong> Objects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/inventory.html"><strong aria-hidden="true">1.5.4.</strong> Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/using_inventory.html"><strong aria-hidden="true">1.5.5.</strong> Using Inventory Items</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/npc.html"><strong aria-hidden="true">1.5.6.</strong> Non-Player Characters (NPC)</a></li><li class="chapter-item expanded "><a href="../../part1/chapter4/summary.html"><strong aria-hidden="true">1.5.7.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter5/index.html"><strong aria-hidden="true">1.6.</strong> Chapter 5 - Sounds and Music (Make Some Noise!)</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter5/sound_effects.html"><strong aria-hidden="true">1.6.1.</strong> Sound Effects</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/bg_music.html"><strong aria-hidden="true">1.6.2.</strong> Background Music</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/speech.html"><strong aria-hidden="true">1.6.3.</strong> Speech</a></li><li class="chapter-item expanded "><a href="../../part1/chapter5/summary.html"><strong aria-hidden="true">1.6.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part1/chapter6/index.html"><strong aria-hidden="true">1.7.</strong> Chapter 6 - Some Other Stuff</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part1/chapter6/settings.html"><strong aria-hidden="true">1.7.1.</strong> General Settings</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/colors.html"><strong aria-hidden="true">1.7.2.</strong> Colors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/cursors.html"><strong aria-hidden="true">1.7.3.</strong> Mouse Cursors</a></li><li class="chapter-item expanded "><a href="../../part1/chapter6/summary.html"><strong aria-hidden="true">1.7.4.</strong> Summary</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../part2/part2.html"><strong aria-hidden="true">2.</strong> Part II - Wishing You Were Here!</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/index.html"><strong aria-hidden="true">2.1.</strong> Chapter 7 - Timers and Randomization</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter7/timers.html"><strong aria-hidden="true">2.1.1.</strong> Timers</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/timers2.html"><strong aria-hidden="true">2.1.2.</strong> Timers, Take 2</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/randomize.html"><strong aria-hidden="true">2.1.3.</strong> Time to Randomize</a></li><li class="chapter-item expanded "><a href="../../part2/chapter7/summary.html"><strong aria-hidden="true">2.1.4.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/index.html"><strong aria-hidden="true">2.2.</strong> Chapter 8 - Spoken Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/dialog.html"><strong aria-hidden="true">2.2.1.</strong> Creating a Dialog</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter8/fonts.html"><strong aria-hidden="true">2.2.1.1.</strong> Fonts</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter8/ags_in_dialog.html"><strong aria-hidden="true">2.2.2.</strong> AGS Scripts inside Dialog Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/controlling_dialogs.html"><strong aria-hidden="true">2.2.3.</strong> Controlling Dialogs with AGS Scripts</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/jumping_dialogs.html"><strong aria-hidden="true">2.2.4.</strong> Jumping Between Dialogs</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/text_parser.html"><strong aria-hidden="true">2.2.5.</strong> Text Parser</a></li><li class="chapter-item expanded "><a href="../../part2/chapter8/summary.html"><strong aria-hidden="true">2.2.6.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter9/index.html"><strong aria-hidden="true">2.3.</strong> Chapter 9 - Cutscenes</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter9/starting_ending.html"><strong aria-hidden="true">2.3.1.</strong> Starting and Ending Cutscenes</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/game_intro.html" class="active"><strong aria-hidden="true">2.3.2.</strong> Creating a Game Intro and End Credits</a></li><li class="chapter-item expanded "><a href="../../part2/chapter9/summary.html"><strong aria-hidden="true">2.3.3.</strong> Summary</a></li></ol></li><li class="chapter-item expanded "><a href="../../part2/chapter10/index.html"><strong aria-hidden="true">2.4.</strong> Chapter 10 - Advanced Topics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../part2/chapter10/masks.html"><strong aria-hidden="true">2.4.1.</strong> Importing masks for walkable areas and walk-behinds</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lip_sync.html"><strong aria-hidden="true">2.4.2.</strong> Lip Sync</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/lighting.html"><strong aria-hidden="true">2.4.3.</strong> Lighting</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/guis.html"><strong aria-hidden="true">2.4.4.</strong> GUIs</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/mirror_effect.html"><strong aria-hidden="true">2.4.5.</strong> Mirror Effect</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/earthquake.html"><strong aria-hidden="true">2.4.6.</strong> EARTHQUAKE!!!!!!!!!</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/translations.html"><strong aria-hidden="true">2.4.7.</strong> Translations</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/modules_plugins.html"><strong aria-hidden="true">2.4.8.</strong> Modules and Plug-ins</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/easter_eggs.html"><strong aria-hidden="true">2.4.9.</strong> Easter Eggs - Wedding dress on Dork!!!!</a></li><li class="chapter-item expanded "><a href="../../part2/chapter10/summary.html"><strong aria-hidden="true">2.4.10.</strong> Summary</a></li><li class="spacer"></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../epilogue/glossary.html">Glossary</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/bibliography.html">Bibliography</a></li><li class="chapter-item expanded affix "><a href="../../epilogue/index.html">Index</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><div>Appendices - Hallelujah brother</div></li><li class="chapter-item expanded affix "><a href="../../appendices/scripting.html">I - Scripting concepts and basics</a></li><li class="chapter-item expanded affix "><a href="../../appendices/dialog_scripting.html">II - Dialog Scripting</a></li><li class="chapter-item expanded affix "><a href="../../appendices/global_variables.html">III - If we don't hit global variables (or even if we do) we might need to elaborate here.</a></li><li class="chapter-item expanded affix "><a href="../../appendices/plugins.html">IV - Plugins</a></li><li class="chapter-item expanded affix "><a href="../../appendices/nonwindows.html">V - Running on non-Windows Systems</a></li><li class="spacer"></li><li class="chapter-item expanded affix "><a href="../../feedback.html">Feedback</a></li><li class="chapter-item expanded affix "><a href="../../redirects/docs.html">AGS Manual</a></li><li class="chapter-item expanded affix "><a href="../../redirects/mdbook.html">Built with mdBook</a></li></ol>
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
             </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
+        <div id="mdbook-page-wrapper" class="page-wrapper">
 
             <div class="page">
-                
-                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
                         </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
                         </ul>
-                        
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
                         </button>
-                        
                     </div>
 
                     <h1 class="menu-title">Game Design with AGS</h1>
 
                     <div class="right-buttons">
-                        
                         <a href="../../print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
                         </a>
-                        
-                        
                         <a href="https://github.com/ensadi/AGSBook" title="Git repository" aria-label="Git repository">
-                            <i id="git-repository-button" class="fa fa-github"></i>
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
                         </a>
-                        
+
                     </div>
                 </div>
 
-                
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
                     </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
                         </ul>
                     </div>
                 </div>
-                
 
                 <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script type="text/javascript">
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
                         link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
                     });
                 </script>
 
-                <div id="content" class="content">
+                <div id="mdbook-content" class="content">
                     <main>
                         <h1 id="creating-a-game-intro-and-end-credits"><a class="header" href="#creating-a-game-intro-and-end-credits">Creating a Game Intro and End Credits</a></h1>
-<p>Although cutscenes can be placed just about anywhere in a game, the best way to do an intro is to create a new room for it instead of plopping it as part of the game's first room.  Yep, that's right! We're making a new room.  This is going to be a special room though, like the one we made for iHal.</p>
-<p>Start by adding a new room to the game.  In our case this is going to be room number 6.  Open the room in the room editor and give it the name <code>Intro</code>. And that's it. We have a room to use as our intro; not much to it.</p>
+<p>Although cutscenes can be placed just about anywhere in a game, the best way to do an intro is to create a new room for it instead of plopping it as part of the game’s first room.  Yep, that’s right! We’re making a new room.  This is going to be a special room though, like the one we made for iHal.</p>
+<p>Start by adding a new room to the game.  In our case this is going to be room number 6.  Open the room in the room editor and give it the name <code>Intro</code>. And that’s it. We have a room to use as our intro; not much to it.</p>
 <p>Since this is the intro room, we will want the main character to start here.  The first room that loads is always the room that is set as the starting room of the main character.</p>
-<p>Expand the Characters node in the Project Tree and double-click on <strong>cFoxyMonk</strong> to edit Foxy's character.  Change Foxy's <code>StartingRoom</code> to 6. Running the game now will show the black intro screen and Foxy just standing there.  Since there are no walkable areas, Foxy won't be able to move, and won't be able to travel to another room. But that's ok. We're going to create a cutscene in this room that will move Foxy to room 1 after it plays through.</p>
+<p>Expand the Characters node in the Project Tree and double-click on <strong>cFoxyMonk</strong> to edit Foxy’s character.  Change Foxy’s <code>StartingRoom</code> to 6. Running the game now will show the black intro screen and Foxy just standing there.  Since there are no walkable areas, Foxy won’t be able to move, and won’t be able to travel to another room. But that’s ok. We’re going to create a cutscene in this room that will move Foxy to room 1 after it plays through.</p>
 <h2 id="the-cutscene"><a class="header" href="#the-cutscene">The Cutscene</a></h2>
-<p>In order to make the cutscene we will use the 'after fade in' function that is available to us in each room.  We'll create a function for the 'after fade in' event and put all of our cutscene code in it.  This way, when the room loads, the function will run and the cutscene will play through.  At the end of the cutscene we will change rooms to room 1.</p>
+<p>In order to make the cutscene we will use the ‘after fade in’ function that is available to us in each room.  We’ll create a function for the ‘after fade in’ event and put all of our cutscene code in it.  This way, when the room loads, the function will run and the cutscene will play through.  At the end of the cutscene we will change rooms to room 1.</p>
 <p>Go back to editing room 6.  Click the lightning bolt to show the room events and then click the ellipses next to <code>Enters room after fade-in</code> to create the function.  See <a href="#figure91">Figure 9.1</a>.</p>
 <p><a name="figure91"></a>
-<span><img src="../../images/afterfadein.png" alt="" /><br><strong>Figure 9.1: Creating the 'after fade in' Function</strong></span></p>
-<p>So that we don't forget the very important cutscene functions, let's go ahead and add them in now, and we'll go ahead and add the room change while we're at it.  Make the <code>room_AfterFadeIn()</code> function look like the following:</p>
+<span><img src="../../images/afterfadein.png" alt=""><br><strong>Figure 9.1: Creating the ‘after fade in’ Function</strong></span></p>
+<p>So that we don’t forget the very important cutscene functions, let’s go ahead and add them in now, and we’ll go ahead and add the room change while we’re at it.  Make the <code>room_AfterFadeIn()</code> function look like the following:</p>
 <pre><code class="language-agsscript">function room_AfterFadeIn()
 {
   StartCutscene(eSkipAnyKeyOrMouseClick);
@@ -187,35 +197,35 @@
 }
 </code></pre>
 <p>As you can see, we start the cutscene and tell it that any key press or mouse click can be used to skip it.  Then we have a comment that reminds us to fill in the good stuff, and then we end the cutscene.  After the cutscene is over, we have Foxy change rooms to room 1 to start the game.  Be sure to put in the change room call after the cutscene is done.</p>
-<p>Now for the actual cutscene code, we'll do something simple.  We'll have Foxy introduce the game for us and then start the game.  But, before we do this, save the game, and run it just to see what would happen.  You should see Foxy come up against a black background, which is our <code>Intro</code> room, then fade to room 1; exactly what we need.</p>
-<p>Let's have Foxy introduce the game now.  Delete the comment in the code if you wish and add a line for Foxy to say &quot;Hi, I'm Foxy. Welcome to Foxy's Quest!&quot; While we're at it, let's add some actual speech.  Make sure there's a sound file called <em>Foxy1.wav</em> in the <em>Speech</em> folder of your game. We, of course, have one for you, but you can make your own.  Then make the line look like this:</p>
-<pre><code class="language-agsscript">cFoxyMonk.Say(&quot;&amp;1 Hi, I'm Foxy. Welcome to Foxy's Quest!&quot;);
+<p>Now for the actual cutscene code, we’ll do something simple.  We’ll have Foxy introduce the game for us and then start the game.  But, before we do this, save the game, and run it just to see what would happen.  You should see Foxy come up against a black background, which is our <code>Intro</code> room, then fade to room 1; exactly what we need.</p>
+<p>Let’s have Foxy introduce the game now.  Delete the comment in the code if you wish and add a line for Foxy to say “Hi, I’m Foxy. Welcome to Foxy’s Quest!” While we’re at it, let’s add some actual speech.  Make sure there’s a sound file called <em>Foxy1.wav</em> in the <em>Speech</em> folder of your game. We, of course, have one for you, but you can make your own.  Then make the line look like this:</p>
+<pre><code class="language-agsscript">cFoxyMonk.Say("&amp;1 Hi, I'm Foxy. Welcome to Foxy's Quest!");
 </code></pre>
 <p>The <code>&amp;1</code> will tell AGS to play the <em>Foxy1.wav</em> file while the speech is displayed. Run this and watch it.  Then run it again and click the mouse or press a button before the speech is done and it should be skipped.  And that is the simplest cutscene in the world.</p>
 <h2 id="overlays"><a class="header" href="#overlays">Overlays</a></h2>
-<p>We'll move away a bit from the cutscene now to introduce overlays.  Since we're making an intro, this would be a good place for it.  Overlays can be either text or graphical and when placed on the screen are always on top of everything else.</p>
-<p>Let's create a few overlays to show the game's name and authors on the screen.  The name of the game will be a graphical overlay and the authors' names will be text overlays.</p>
-<p>Start by going to the sprites editor and importing the file named <em>GameNameOverlay.png</em>. This is an image we created for the name of the game.  If you don't like it, well, make your own then.  Just remember, it needs to fit the screen.  We created a sub-folder under Sprites named <em>Overlays</em> in which to put the image, just so we can keep everything organized.  Our image was placed in slot 75 in the Sprites editor.  Yours may be different.</p>
-<p>Go back to editing the <code>Intro</code> room's script.  Right before Foxy introduces the game, place the following lines:</p>
+<p>We’ll move away a bit from the cutscene now to introduce overlays.  Since we’re making an intro, this would be a good place for it.  Overlays can be either text or graphical and when placed on the screen are always on top of everything else.</p>
+<p>Let’s create a few overlays to show the game’s name and authors on the screen.  The name of the game will be a graphical overlay and the authors’ names will be text overlays.</p>
+<p>Start by going to the sprites editor and importing the file named <em>GameNameOverlay.png</em>. This is an image we created for the name of the game.  If you don’t like it, well, make your own then.  Just remember, it needs to fit the screen.  We created a sub-folder under Sprites named <em>Overlays</em> in which to put the image, just so we can keep everything organized.  Our image was placed in slot 75 in the Sprites editor.  Yours may be different.</p>
+<p>Go back to editing the <code>Intro</code> room’s script.  Right before Foxy introduces the game, place the following lines:</p>
 <pre><code class="language-agsscript">Overlay *ovTitle;
 ovTitle = Overlay.CreateGraphical( 0, 10, 75, false );
 </code></pre>
-<p>And right after Foxy's line place the following lines:</p>
+<p>And right after Foxy’s line place the following lines:</p>
 <pre><code class="language-agsscript">Wait(20);
 ovTitle.Remove();
 </code></pre>
-<p>Let's examine what we just did.  The first line we added declares a variable called <code>ovTitle</code> that will hold our overlay. Notice, however, that there's a <code>*</code> before it. The <code>*</code> means that this is a pointer variable.  A pointer variable holds the address of a variable and not the contents of the variable.  If this is all foreign to you, then just remember that when declaring overlay variables, they need a <code>*</code> before them. (See <a href="../../appendices/scripting.html">Appendix I</a> for scripting help and the */pointer stuff).</p>
+<p>Let’s examine what we just did.  The first line we added declares a variable called <code>ovTitle</code> that will hold our overlay. Notice, however, that there’s a <code>*</code> before it. The <code>*</code> means that this is a pointer variable.  A pointer variable holds the address of a variable and not the contents of the variable.  If this is all foreign to you, then just remember that when declaring overlay variables, they need a <code>*</code> before them. (See <a href="../../appendices/scripting.html">Appendix I</a> for scripting help and the */pointer stuff).</p>
 <p>The second line actually creates the graphical overlay.  It places it at x,y coordinates (0,10), uses our newly imported image, which is 75, and sets the transparency to <code>false</code>. This overlay can be referenced by our variable <code>ovTitle</code> now.</p>
-<p>The third line is a wait.  We've seen the <code>Wait()</code> function before. This one waits for 20 game cycles, or about 0.5 seconds.  The last line calls the <code>Remove()</code> function of the overlay to remove it.  It's always good to remove your overlays when you're done with them.</p>
-<p>Creating the text overlays for the author names is even easier because there are no images to import.  We are, however, going to create a new view for Foxy to make things look neater.  This should be a quick and easy view composed of one loop and one frame.  Right-click on <strong>Views</strong> and choose <strong>New View</strong>. Call it <code>vFMPoint</code>. Create a new loop and then go back to the Sprites editor.  Find the sprite of Foxy pointing.  On ours it's number 49.  Right-click that sprite and assign it to our new view.  That's it.  Now we have a pointing view.</p>
-<p>te the text overlays, we're going to declare overlay variables, and then call the <code>CreateTextual()</code> function instead of the <code>CreateGraphical()</code> function. Add the following:</p>
+<p>The third line is a wait.  We’ve seen the <code>Wait()</code> function before. This one waits for 20 game cycles, or about 0.5 seconds.  The last line calls the <code>Remove()</code> function of the overlay to remove it.  It’s always good to remove your overlays when you’re done with them.</p>
+<p>Creating the text overlays for the author names is even easier because there are no images to import.  We are, however, going to create a new view for Foxy to make things look neater.  This should be a quick and easy view composed of one loop and one frame.  Right-click on <strong>Views</strong> and choose <strong>New View</strong>. Call it <code>vFMPoint</code>. Create a new loop and then go back to the Sprites editor.  Find the sprite of Foxy pointing.  On ours it’s number 49.  Right-click that sprite and assign it to our new view.  That’s it.  Now we have a pointing view.</p>
+<p>te the text overlays, we’re going to declare overlay variables, and then call the <code>CreateTextual()</code> function instead of the <code>CreateGraphical()</code> function. Add the following:</p>
 <pre><code class="language-agsscript">Overlay *davesName;
 Overlay *georgesName;
-davesName = Overlay.CreateTextual( 70, 60, 100, eFontNormal, 10, &quot;David Ensminger&quot; );
-georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. Madi&quot; );
+davesName = Overlay.CreateTextual( 70, 60, 100, eFontNormal, 10, "David Ensminger" );
+georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, "A. G. Madi" );
 </code></pre>
-<p>The <code>CreateTextual()</code> function is very similar to the graphical one.  It takes and x,y pair for text placement, a size (100), a font (<code>eFontNormal</code>, <code>eFontSpeech</code>, or <code>eFontOutline</code>),  a color code (We used 10 just randomly, but it's a nice color), and the actual text to display.</p>
-<p>Let's improve a bit on this cutscene now by making Foxy move around a bit and introduce the game developers.  All the code for this should be familiar to you by now so we'll just show it to you here.  There are three things to note though.  One is the fact that we don't have walkable areas in this room, so we tell Foxy to walk anywhere.  You could make walkable areas instead, but there's just no need in this case.  Two is the fact that we change Foxy's view to that of our newly created pointing view.  This makes Foxy point at the authors' names when she introduces them.  Just don't forget to change it back when you're done with it.  And three is the fact that we bring Foxy back to her starting position when she's done with the introductions.  This is to make sure she starts at that position when the scene changes to room 1.  Of course, there are other ways to do this, but this is the one we chose.</p>
+<p>The <code>CreateTextual()</code> function is very similar to the graphical one.  It takes and x,y pair for text placement, a size (100), a font (<code>eFontNormal</code>, <code>eFontSpeech</code>, or <code>eFontOutline</code>),  a color code (We used 10 just randomly, but it’s a nice color), and the actual text to display.</p>
+<p>Let’s improve a bit on this cutscene now by making Foxy move around a bit and introduce the game developers.  All the code for this should be familiar to you by now so we’ll just show it to you here.  There are three things to note though.  One is the fact that we don’t have walkable areas in this room, so we tell Foxy to walk anywhere.  You could make walkable areas instead, but there’s just no need in this case.  Two is the fact that we change Foxy’s view to that of our newly created pointing view.  This makes Foxy point at the authors’ names when she introduces them.  Just don’t forget to change it back when you’re done with it.  And three is the fact that we bring Foxy back to her starting position when she’s done with the introductions.  This is to make sure she starts at that position when the scene changes to room 1.  Of course, there are other ways to do this, but this is the one we chose.</p>
 <pre><code class="language-agsscript">function room_AfterFadeIn()
 {
   StartCutscene(eSkipAnyKeyOrMouseClick);
@@ -225,12 +235,12 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
   
   Overlay *davesName;
   Overlay *georgesName;
-  davesName = Overlay.CreateTextual( 70, 60, 100, eFontNormal, 10, &quot;David Ensminger&quot; );
-  georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. Madi&quot; );
+  davesName = Overlay.CreateTextual( 70, 60, 100, eFontNormal, 10, "David Ensminger" );
+  georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, "A. G. Madi" );
 
   int x = cFoxyMonk.x;
   int y = cFoxyMonk.y;
-  cFoxyMonk.Say(&quot;&amp;1 Hi, I'm Foxy. Welcome to Foxy's Quest!&quot;);
+  cFoxyMonk.Say("&amp;1 Hi, I'm Foxy. Welcome to Foxy's Quest!");
   cFoxyMonk.Walk(110, 120, eBlock, eAnywhere);
   cFoxyMonk.LockView(VFMPOINT);
   Wait(40);
@@ -250,7 +260,7 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
 }
 </code></pre>
 <h2 id="endcutscene"><a class="header" href="#endcutscene">EndCutscene()</a></h2>
-<p>The <code>EndCutscene()</code> function needs to be examined a little closer since it actually returns a value. If you recall, the function will return a 0 if the player actually watched the entire cutscene and 1 if the player skipped it.  We're going to use this value to yell at the player for skipping our cutscene.</p>
+<p>The <code>EndCutscene()</code> function needs to be examined a little closer since it actually returns a value. If you recall, the function will return a 0 if the player actually watched the entire cutscene and 1 if the player skipped it.  We’re going to use this value to yell at the player for skipping our cutscene.</p>
 <p>are an integer variable at the top of the intro function and call it <code>iYellAtPlayer</code>:</p>
 <pre><code class="language-agsscript">int iYellAtPlayer;
 </code></pre>
@@ -260,26 +270,26 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
 <p>Right after that line and before the change room line, add the following:</p>
 <pre><code class="language-agsscript">if(iYellAtPlayer == 1)
 {
-  cFoxyMonk.Say(&quot; What!!??? How dare you not watch my cutscene!!&quot;);
+  cFoxyMonk.Say(" What!!??? How dare you not watch my cutscene!!");
   Wait(20);
-  cFoxyMonk.Say(&quot; WELL FINE THEN!&quot;);
+  cFoxyMonk.Say(" WELL FINE THEN!");
   Wait(40);
 }
 </code></pre>
-<p>Now, when you skip the intro, you'll get yelled at.  Notice also that Foxy will end up at the final position no matter when the intro is skipped.  Remember that's because when a player skips a cutscene, AGS actually fast forwards through it and executes every instruction in there really fast.</p>
+<p>Now, when you skip the intro, you’ll get yelled at.  Notice also that Foxy will end up at the final position no matter when the intro is skipped.  Remember that’s because when a player skips a cutscene, AGS actually fast forwards through it and executes every instruction in there really fast.</p>
 <h2 id="colors"><a class="header" href="#colors">Colors</a></h2>
 <p>Remember the color that we passed in to the <code>Overlay.CreateTextual()</code> function?  Well, there are a lot of colors that you can pass in, and there is an easy way to find those colors.</p>
-<p>Look in the Project Tree and you should see a <strong>colours</strong> option. Double-clicking this option will bring up the Colors editor.   We're not going to concern ourselves with creating color, but we are going to use the handy <strong>Colour Finder</strong>, which will be the second tab of the editor, as seen in <a href="#figure92">Figure 9.2</a>.</p>
+<p>Look in the Project Tree and you should see a <strong>colours</strong> option. Double-clicking this option will bring up the Colors editor.   We’re not going to concern ourselves with creating color, but we are going to use the handy <strong>Colour Finder</strong>, which will be the second tab of the editor, as seen in <a href="#figure92">Figure 9.2</a>.</p>
 <p><a name="figure92"></a>
-<span><img src="../../images/colourfinder.png" alt="" /><br><strong>Figure 9.2: Colour Finder</strong></span></p>
-<p>There are two ways to find a color to use.  The first way is to play with the Red, Green, Blue sliders until you see a color you like.  Then, you can take the number in the <strong>Colour number</strong> box and plug it into the <code>Overlay.CreateTextual()</code> function. The second way is to click the <strong>Find Colour...</strong> button to bring up the Windows Color dialog box as in: </p>
+<span><img src="../../images/colourfinder.png" alt=""><br><strong>Figure 9.2: Colour Finder</strong></span></p>
+<p>There are two ways to find a color to use.  The first way is to play with the Red, Green, Blue sliders until you see a color you like.  Then, you can take the number in the <strong>Colour number</strong> box and plug it into the <code>Overlay.CreateTextual()</code> function. The second way is to click the <strong>Find Colour…</strong> button to bring up the Windows Color dialog box as in:</p>
 <p><a name="figure93"></a>
-<span><img src="../../images/colordialog.png" alt="" /><br><strong>Figure 9.3: Windows Color Dialog</strong></span></p>
+<span><img src="../../images/colordialog.png" alt=""><br><strong>Figure 9.3: Windows Color Dialog</strong></span></p>
 <p>You can use this dialog to find the Red, Green, Blue values of a color, then go back to the sliders to set that color and get the number to plug into the <code>Overlay.CreateTextual()</code> function.</p>
 <h2 id="end-credits"><a class="header" href="#end-credits">End Credits</a></h2>
-<p>Since we have an intro, we think it would only be fitting to also have some end credits.  Creating end credits is just as simple as creating an intro.  We will create a new room and put a cutscene in it.  Let's dive right in.</p>
-<p>Create a new room and call it <strong>End Credits</strong>. Set the <code>ShowPlayerCharacter</code> option to <code>False</code>, because we don't need to see Foxy when the credits are rolling.  Now, create a function for the room's after fade-in event and create a cutscene in that function.  This is very much just like making the intro.  In the cutscene, we're going to create a text overlay and scroll it up the screen with whatever text we want in it.</p>
-<p>The two important things that we need in order to scroll the credits are changing the position of the text overlay and changing the text of the text overlay. To change the position, we set the text overlay's x and y values; to change the text, we call the text overlay's <code>SetText()</code> function.  The <code>SetText()</code> function takes the overlay width, font type, color, and text as parameters.  These are the same parameters that <code>Overlay.CreateTextual()</code> takes except for the x and y coordinates. The code follows:</p>
+<p>Since we have an intro, we think it would only be fitting to also have some end credits.  Creating end credits is just as simple as creating an intro.  We will create a new room and put a cutscene in it.  Let’s dive right in.</p>
+<p>Create a new room and call it <strong>End Credits</strong>. Set the <code>ShowPlayerCharacter</code> option to <code>False</code>, because we don’t need to see Foxy when the credits are rolling.  Now, create a function for the room’s after fade-in event and create a cutscene in that function.  This is very much just like making the intro.  In the cutscene, we’re going to create a text overlay and scroll it up the screen with whatever text we want in it.</p>
+<p>The two important things that we need in order to scroll the credits are changing the position of the text overlay and changing the text of the text overlay. To change the position, we set the text overlay’s x and y values; to change the text, we call the text overlay’s <code>SetText()</code> function.  The <code>SetText()</code> function takes the overlay width, font type, color, and text as parameters.  These are the same parameters that <code>Overlay.CreateTextual()</code> takes except for the x and y coordinates. The code follows:</p>
 <pre><code class="language-agsscript">function room_AfterFadeIn()
 {
   Overlay *ovTitle;
@@ -288,7 +298,7 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
   int j;
   
   StartCutscene(eSkipAnyKeyOrMouseClick);
-  textScroller = Overlay.CreateTextual( 120, 200, 100, eFontNormal, 41725, &quot;Foxy's Quest&quot;  );
+  textScroller = Overlay.CreateTextual( 120, 200, 100, eFontNormal, 41725, "Foxy's Quest"  );
   i = 0;
   while(i &lt; 5)
   {
@@ -298,13 +308,13 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
       Wait(1);
     }
     if(i == 0)
-      textScroller.SetText(100, eFontNormal, 41725, &quot;Written by[David Ensminger[A.G. Madi&quot;);
+      textScroller.SetText(100, eFontNormal, 41725, "Written by[David Ensminger[A.G. Madi");
     else if(i == 1)
-      textScroller.SetText(100, eFontNormal, 41725, &quot;Produced by[David Ensminger[A.G. Madi&quot;);
+      textScroller.SetText(100, eFontNormal, 41725, "Produced by[David Ensminger[A.G. Madi");
     else if(i == 2)
-      textScroller.SetText(100, eFontNormal, 41725, &quot;Directed by[David Ensminger[A.G. Madi&quot;);
+      textScroller.SetText(100, eFontNormal, 41725, "Directed by[David Ensminger[A.G. Madi");
     else if(i == 3)
-      textScroller.SetText(100, eFontNormal, 41725, &quot;Voiced by[David Ensminger[A.G. Madi[T.J. Madi&quot;);
+      textScroller.SetText(100, eFontNormal, 41725, "Voiced by[David Ensminger[A.G. Madi[T.J. Madi");
     textScroller.Y = 200;
     i++;
   }
@@ -318,20 +328,20 @@ georgesName = Overlay.CreateTextual( 190, 60, 100, eFontNormal, 10, &quot;A. G. 
   QuitGame(0);
 }
 </code></pre>
-<p>Let's dissect this code.  The first few lines should be familiar to you.  We declare two overlays; one for the text that we will be scrolling and one for the game's name that we will display at the end of the credits.  We create the text overlay first with the name of the game and set its Y coordinate to 200, which sets it at the bottom of the screen, and, since AGS uses the top left corner of the overlay for the coordinates, this effectively puts the overlay below the screen, and makes it look like it's coming up from below.</p>
-<p>Now for some loops, but not the same kind of loops that we did with with sprites back in <a href="../../part1/chapter2/index.html">Chapter 2</a>. We're going to create scripting loops.  We haven't done scripting loops before, and technically, we don't have to do them now, but this is a great time to learn them.  Loops enable us to do the same thing multiple times without having to copy and paste the same code over and over again.  AGS gives us the <code>while</code> loop; which allows us to do something <strong>WHILE</strong> something else is true.</p>
-<p>We are going to use 2, separate, <code>while</code> loops: One loop will be used to change the text of the overlay, and the other loop will be used to move the overlay up on the screen.   The first loop will run 5 times because we have 5 text overlays that we want to show: The name of the game, 'Written by', 'Produced by', 'Directed by', and 'Voiced by'. So, we set a variable, <code>i</code>, equal to zero to start out and we tell AGS to run the code in the <code>while</code> loop WHILE <code>i</code> is less than 5, and each time through the loop we call <code>i++</code>, which is scripting talk for adding 1 to the <code>i</code> variable. This gives us five loops when <code>i</code> is 0, 1, 2, 3, and 4. As soon as <code>i</code> reaches 5, the <code>while(i &lt; 5)</code> will be <code>false</code> and the loop will end.  By the way, everything between the <code>{</code> and <code>}</code> gets done each time through the loop. So, this outer while loop will scroll the overlay up the screen, change the overlay's text depending on what the <code>i</code> variable is, add 1 to <code>i</code>, and start over.</p>
-<p>The second <code>while</code> loop is inside the first and it does the actuall scrolling of the overlay up the screen.  Each time through the loop we subtract 1 from the Y coordinate of the overlay, which moves it up a pixel, and we wait for 1 game loop, so the overlay doesn't just fly up the screen.  (In fact, take the wait out and you won't even see any scrolling because the overlay will move so fast.) We do this while the Y coordinate is grater than -30.  Why -30 you ask; because that way it scrolls completely off the screen and puts a bit of a pause between each subsequent overlay scroll.</p>
-<p>You may have noticed that there are <code>[</code> characters in our strings. And, if you already ran the game, you probably know that this tells AGS to put whatever is after the <code>[</code> character on a new line.  Just thought we'd mention that.</p>
+<p>Let’s dissect this code.  The first few lines should be familiar to you.  We declare two overlays; one for the text that we will be scrolling and one for the game’s name that we will display at the end of the credits.  We create the text overlay first with the name of the game and set its Y coordinate to 200, which sets it at the bottom of the screen, and, since AGS uses the top left corner of the overlay for the coordinates, this effectively puts the overlay below the screen, and makes it look like it’s coming up from below.</p>
+<p>Now for some loops, but not the same kind of loops that we did with with sprites back in <a href="../../part1/chapter2/index.html">Chapter 2</a>. We’re going to create scripting loops.  We haven’t done scripting loops before, and technically, we don’t have to do them now, but this is a great time to learn them.  Loops enable us to do the same thing multiple times without having to copy and paste the same code over and over again.  AGS gives us the <code>while</code> loop; which allows us to do something <strong>WHILE</strong> something else is true.</p>
+<p>We are going to use 2, separate, <code>while</code> loops: One loop will be used to change the text of the overlay, and the other loop will be used to move the overlay up on the screen.   The first loop will run 5 times because we have 5 text overlays that we want to show: The name of the game, ‘Written by’, ‘Produced by’, ‘Directed by’, and ‘Voiced by’. So, we set a variable, <code>i</code>, equal to zero to start out and we tell AGS to run the code in the <code>while</code> loop WHILE <code>i</code> is less than 5, and each time through the loop we call <code>i++</code>, which is scripting talk for adding 1 to the <code>i</code> variable. This gives us five loops when <code>i</code> is 0, 1, 2, 3, and 4. As soon as <code>i</code> reaches 5, the <code>while(i &lt; 5)</code> will be <code>false</code> and the loop will end.  By the way, everything between the <code>{</code> and <code>}</code> gets done each time through the loop. So, this outer while loop will scroll the overlay up the screen, change the overlay’s text depending on what the <code>i</code> variable is, add 1 to <code>i</code>, and start over.</p>
+<p>The second <code>while</code> loop is inside the first and it does the actuall scrolling of the overlay up the screen.  Each time through the loop we subtract 1 from the Y coordinate of the overlay, which moves it up a pixel, and we wait for 1 game loop, so the overlay doesn’t just fly up the screen.  (In fact, take the wait out and you won’t even see any scrolling because the overlay will move so fast.) We do this while the Y coordinate is grater than -30.  Why -30 you ask; because that way it scrolls completely off the screen and puts a bit of a pause between each subsequent overlay scroll.</p>
+<p>You may have noticed that there are <code>[</code> characters in our strings. And, if you already ran the game, you probably know that this tells AGS to put whatever is after the <code>[</code> character on a new line.  Just thought we’d mention that.</p>
 <h2 id="homework"><a class="header" href="#homework">Homework</a></h2>
 <p>Create a dialog (or GUI) that pops up after the end credits that acts like a menu with choices to start a new game, load a previous game, or quit (hints: <code>RestartGame()</code>, <code>RestoreGameDialog()</code>).</p>
 <h2 id="just-for-fun"><a class="header" href="#just-for-fun">Just For Fun</a></h2>
-<p>Just so that we can get to the credits quickly and for a bit of fun, we're going to change the intro so that the user will get sent straight to the credits if the intro is skipped.  Change the code after the call to <code>EndCutscene()</code> in the intro room to the following:</p>
+<p>Just so that we can get to the credits quickly and for a bit of fun, we’re going to change the intro so that the user will get sent straight to the credits if the intro is skipped.  Change the code after the call to <code>EndCutscene()</code> in the intro room to the following:</p>
 <pre><code class="language-agsscript">if(iYellAtPlayer == 1)
 {
-  cFoxyMonk.Say(&quot; What!!??? How dare you not watch my cutscene!!&quot;);
+  cFoxyMonk.Say(" What!!??? How dare you not watch my cutscene!!");
   Wait(20);
-  cFoxyMonk.Say(&quot; WELL FINE THEN! NO GAME FOR YOU!&quot;);
+  cFoxyMonk.Say(" WELL FINE THEN! NO GAME FOR YOU!");
   Wait(40);
   davesName.Remove();
   georgesName.Remove();
@@ -346,23 +356,19 @@ else
   cFoxyMonk.ChangeRoom(1);
 }
 </code></pre>
-<p>By the way, that's actually very annoying, and we only did it to show you that you can.  Don't do that in a real game or we won't play it!</p>
+<p>By the way, that’s actually very annoying, and we only did it to show you that you can.  Don’t do that in a real game or we won’t play it!</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                        
                             <a rel="prev" href="../../part2/chapter9/starting_ending.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                             </a>
-                        
 
-                        
-                            <a rel="next" href="../../part2/chapter9/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
+                            <a rel="next prefetch" href="../../part2/chapter9/summary.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                             </a>
-                        
 
                         <div style="clear: both"></div>
                     </nav>
@@ -370,49 +376,58 @@ else
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                
                     <a rel="prev" href="../../part2/chapter9/starting_ending.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M41.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.3 256 246.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg></span>
                     </a>
-                
 
-                
-                    <a rel="next" href="../../part2/chapter9/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
+                    <a rel="next prefetch" href="../../part2/chapter9/summary.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M278.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L210.7 256 73.4 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg></span>
                     </a>
-                
             </nav>
 
         </div>
 
-        
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
 
-        
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
 
-        
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
-        
-        <script type="text/javascript">
+
+        <script>
             window.playground_copyable = true;
         </script>
-        
 
-        
 
-        
-        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
-        
+        <script src="../../elasticlunr-ef4e11c1.min.js"></script>
+        <script src="../../mark-09e88c2c.min.js"></script>
+        <script src="../../searcher-09f2665d.js"></script>
 
-        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../clipboard-1626706a.min.js"></script>
+        <script src="../../highlight-f36b6b83.js"></script>
+        <script src="../../book-c22b7243.js"></script>
 
         <!-- Custom JS scripts -->
-        
 
-        
 
+
+    </div>
     </body>
 </html>

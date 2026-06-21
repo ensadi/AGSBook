@@ -8,7 +8,7 @@ First online electronic edition published: 2021
 <br/>
 <br/>
 
-&copy; 2021, Ensadi LLC
+&copy; 2021-2026, Ensadi LLC
 
 <br/>
 <br/>
